@@ -1,0 +1,13 @@
+.header-footer {
+    height: 10px;
+}
+
+input {
+    width: 300px;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #bf4342;
+    color: whitesmoke;
+}

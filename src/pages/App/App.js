@@ -5,9 +5,11 @@ import NavBar from '../../components/NavBar/NavBar';
 import HorseMarketplace from '../../components/HorseMarketplace/HorseMarketplaces';
 import ListHorse from '../../components/ListHorse/ListHorse';
 import HorseCard from '../../components/HorseCard/HorseCard';
+import Barn from '../../components/BarnImg/BarnImg'
 import userService from '../../services/userServices'
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+
 
 class App extends Component {
   /*--- State ---*/
@@ -46,11 +48,11 @@ class App extends Component {
             user={this.state.user}
             handleLogout={this.handleLogout}
           />
-          Steed Finder - Bojack Horseman
         </header>
         <Switch>
           <Route exact path='/' render={() =>
             <div>
+              <Barn />
               <HorseMarketplace />
               <ListHorse />
               <HorseCard />

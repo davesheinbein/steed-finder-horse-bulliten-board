@@ -1,13 +1,29 @@
 .NavBar {
     display: flex;
     justify-content: center;
-    margin: 0 0 20px;
-  }
-  
-  .NavBar-link {
-    margin: 0 10px;
-  }
-  
-  .NavBar-welcome {
-    color: grey;
-  }
+    width: 100%;
+}
+
+.NavBar-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavBar-link {
+    color: whitesmoke;
+}
+
+.NavBar-welcome {
+    color: #BF4342;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+
+.NavBar-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px 1rem;
+}
+
