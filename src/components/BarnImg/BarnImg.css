@@ -1,0 +1,14 @@
+.barnImg {
+    color: red;
+    margin: 25px 0px 0px;
+}
+
+.titleText {
+    font-size: 80px;
+    /* color: #8C1C13; */
+    color: #BF4342;
+    position: absolute;
+    top: 210px;
+    text-align: center;
+    width: 100%;
+}
