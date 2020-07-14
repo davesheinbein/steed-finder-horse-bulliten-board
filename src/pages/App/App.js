@@ -45,7 +45,6 @@ class App extends Component {
           <NavBar
             user={this.state.user}
             handleLogout={this.handleLogout}
-            // handleSignupOrLogin={this.handleSignupOrLogin}
           />
           Steed Finder - Bojack Horseman
         </header>

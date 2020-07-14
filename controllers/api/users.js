@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const User = require('../../models/user');
 const jwt = require('jsonwebtoken');
 
 const SECRET = process.env.SECRET;
@@ -26,8 +26,9 @@ async function login(req, res) {
 }
 
 async function signup(req, res) {
-  const user = new User(req.body);
-  try {
+    console.log("hitting signup controller");
+    const user = new User(req.body);
+    try {
     await user.save();
     // TODO: Send back a JWT instead of the user
     const token = createJWT(user);
