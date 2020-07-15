@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@600&display=swap');
 
+* {
+  box-sizing: border-box;
+  }
+
 body {
   margin: 0;
   padding: 0;
@@ -8,7 +12,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(180deg, rgba(231,215,193,1) 35%, rgba(158,153,146,1) 100%);
+  background: linear-gradient(180deg, rgba(231,215,193,1) 35%, rgba(158,153,146,1) 100%) no-repeat center center fixed; 
+  min-height: 100vh;
 }
 
 

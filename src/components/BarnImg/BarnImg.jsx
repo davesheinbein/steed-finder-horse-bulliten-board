@@ -10,6 +10,7 @@ function Barn() {
     <div>
       <img src={barn} alt="Barn" className='barnImg'/>
       <div className='titleText'>Steed Finder</div>
+      <div className='subTitleText'>Horse Marketplace</div>
     </div>
   ) 
 }

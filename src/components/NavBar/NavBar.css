@@ -12,18 +12,31 @@
 
 .NavBar-link {
     color: whitesmoke;
+    text-decoration: none;
+}
+.NavBar-link:hover {
+    color: white;
+    background-color: #BF4342;
+    border-radius: 10px;
+    padding: 0px 5px;
 }
 
 .NavBar-welcome {
     color: #BF4342;
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
+    background-color: #E7D7C1;
+    border-radius: 10px;
+    padding: 0px 5px;
 }
 
 .NavBar-header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* justify-content: space-around; */
     width: 100%;
     margin: 0px 1rem;
+}
+
+.mainLogoText {
+    text-align: center;
 }
 

@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    /* justify-self: flex-end; */
+    align-self: flex-end;
+    width:  100%;
+    background-color: red;
+    padding: 5px 0px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.barnFooterImg {
+    width: 20px;
+}
+

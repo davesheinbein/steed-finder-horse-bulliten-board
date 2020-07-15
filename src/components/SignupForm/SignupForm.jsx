@@ -79,31 +79,7 @@ class SignupForm extends Component {
                 className="form-control"
                 placeholder="Location (City, State)"
                 value={this.state.location}
-                name="email"
-                onChange={this.handleChange} 
-                />
-            </div>
-          </div>
-          <div className="form-group">
-            <div className="col-sm-12">
-              <input
-                type="contactName"
-                className="form-control"
-                placeholder="Contact Name"
-                value={this.state.contactName}
-                name="email"
-                onChange={this.handleChange} 
-                />
-            </div>
-          </div>
-          <div className="form-group">
-            <div className="col-sm-12">
-              <input
-                type="contactEmail"
-                className="form-control"
-                placeholder="Contact Email"
-                value={this.state.contactEmail}
-                name="email"
+                name="location"
                 onChange={this.handleChange} 
                 />
             </div>
@@ -115,7 +91,7 @@ class SignupForm extends Component {
                 className="form-control"
                 placeholder="Contact Number #"
                 value={this.state.contactNumber}
-                name="email"
+                name="contactNumber"
                 onChange={this.handleChange} 
                 />
             </div>
@@ -153,7 +129,7 @@ class SignupForm extends Component {
                 disabled={this.isFormInvalid()}>
                 Sign Up
               </button>&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+              <Link to='/' className="cancelLink">Cancel</Link>
             </div>
           </div>
         </form>

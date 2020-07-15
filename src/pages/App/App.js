@@ -6,6 +6,7 @@ import HorseMarketplace from '../../components/HorseMarketplace/HorseMarketplace
 import ListHorse from '../../components/ListHorse/ListHorse';
 import HorseCard from '../../components/HorseCard/HorseCard';
 import Barn from '../../components/BarnImg/BarnImg'
+import Footer from '../../components/Footer/Footer'
 import userService from '../../services/userServices'
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -76,6 +77,9 @@ class App extends Component {
             />
           } />
         </Switch>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     );
   }

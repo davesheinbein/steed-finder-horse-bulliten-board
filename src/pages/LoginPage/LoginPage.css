@@ -5,3 +5,36 @@
     align-items: center;
     margin-bottom: 50px;
   }
+
+  .header-footer {
+    height: 10px;
+    color: #BF4342;
+    font-size: 60px;
+    margin: 0 0 5rem;
+  }
+
+  button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  button:hover {
+    background-color: white;
+    color: #BF4342;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .cancelLink {
+    color: #BF4342;
+    text-decoration: none;
+    padding: 5px;
+  }
+  .cancelLink:hover {
+    color: white;
+    background-color: #BF4342;
+    border-radius: 5px;
+    padding: 0px 5px;
+  }
+
+  

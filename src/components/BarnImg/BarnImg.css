@@ -7,8 +7,15 @@
     font-size: 80px;
     /* color: #8C1C13; */
     color: #BF4342;
-    position: absolute;
-    top: 210px;
     text-align: center;
     width: 100%;
+    margin: -40px -0px;
+}
+
+.subTitleText {
+    font-size: 50px;
+    color: #BF4342;
+    text-align: center;
+    width: 100%;
+    margin: -60px -0px;
 }

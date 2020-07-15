@@ -4,10 +4,33 @@
 
 input {
     width: 300px;
-    margin-bottom: 5px;
+    /* margin-bottom: 10px; */
 }
 
 button {
     background-color: #bf4342;
-    color: whitesmoke;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: white;
+    color: #BF4342;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.cancelLink {
+    color: #BF4342;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.cancelLink:hover {
+    color: white;
+    background-color: #BF4342;
+    border-radius: 5px;
+    padding: 0px 5px;
 }

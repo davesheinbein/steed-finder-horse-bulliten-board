@@ -11,8 +11,13 @@ const NavBar = (props) => {
         &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
         <span className='NavBar-welcome'>Welcome, {props.user.name}</span>
       </div>
-      <div>
+      <div className='mainLogoText'>
         Steed Finder
+      </div>
+      <div>
+        <Link to='/marketplace' className='NavBar-link'>Marketplace</Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to='/listhorse' className='NavBar-link'>List Horse</Link>
       </div>
     </div>
     :
@@ -22,8 +27,11 @@ const NavBar = (props) => {
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <Link to='/signup' className='NavBar-link'>SIGN UP</Link>
       </div>
+      <div className='mainLogoText'>
+        Steed Finder
+      </div>
       <div>
-        Bojack Horseman
+        Placeholder
       </div>
     </div>;
 
