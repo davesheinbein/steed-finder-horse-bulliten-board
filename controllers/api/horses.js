@@ -3,7 +3,8 @@ const Horse = require('../../models/horse');
 module.exports = {
    index,
    show,
-   create
+   create,
+   delete: deleteOne,
 }
 
 function index(req, res) {
@@ -23,3 +24,8 @@ function create(req, res) {
       res.status(201).json(horse)
    })
 }
+
+async function deleteOne(req, res) {
+   const deletedHorse = await Horse.findByIdAndRemove(req.params.id);
+   res.status(200).json(deletedHorse);
+ }
