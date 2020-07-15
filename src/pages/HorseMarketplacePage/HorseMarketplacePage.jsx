@@ -7,14 +7,10 @@ function HorseMarketplace(props) {
         <div className='HorseMarketplace'>
             {props.horses.map(horse =>
                 <HorseMarketplaceItem
+                    handleDeleteHorse={props.handleDeleteHorse}
                     horse={horse}
                     key={horse._id}
                 />
-                // <HorseCard
-                //     horse={horse}
-
-                //     key={horse._id}
-                // />
             )}
         </div>
     )

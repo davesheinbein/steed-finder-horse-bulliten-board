@@ -43,20 +43,23 @@ class App extends Component {
   }
 
   handleUpdateHorse = async updatedHorseData => {
+    console.log('hitting update horse');
     const updatedHorse = await horseServices.update(updatedHorseData);
     // Using map to replace just the puppy that was updated
     const newHorseArray = this.state.horses.map(h =>
       h._id === updatedHorse._id ? updatedHorse : h
     );
+    // console.log(newHorseArray, 'newHorseArray');
     this.setState(
       { horses: newHorseArray },
       // This cb function runs after state is updated
-      () => this.props.history.push('/')
-    );
+      () => this.props.history.push('/marketplace')
+      );
+      console.log(this.setState, 'this.setState');
   }
 
   handleDeleteHorse = async id => {
-    await horseServices.deleteOne(id);
+    await horseServices.delete(id);
     this.setState(state => ({
       // Yay, filter returns a NEW array
       horses: state.horses.filter(h => h._id !== id)
@@ -75,10 +78,10 @@ class App extends Component {
   /*--- Lifecycle Methods ---*/
 
   async componentDidMount() {
-    console.log('components mounted');
+    // console.log('components mounted');
     const horses = await horseServices.index();
     this.setState({ horses });
-    console.log(this.state);
+    // console.log(this.state);
 
   }
 

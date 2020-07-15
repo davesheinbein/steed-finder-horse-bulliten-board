@@ -26,16 +26,23 @@ function create(horse) {
   return fetch(BASE_URL, options).then(res => res.json());
 }
 
-export function update(horse) {
-  return fetch(`${BASE_URL}/${horse._id}`, {
+function update(horse) {
+  return fetch(`${BASE_URL}${horse._id}`, {
     method: 'PUT',
-    headers: {'content-type': 'application/json'},
+    headers: {
+      'content-type': 'application/json',
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    },
     body: JSON.stringify(horse)
   }).then(res => res.json());
 }
 
-export function deleteOne(id) {
-  return fetch(`${BASE_URL}/${id}`, {
-    method: 'DELETE'
+function deleteOne(id) {
+  return fetch(`${BASE_URL}${id}`, {
+    method: 'DELETE',
+    headers: {
+      'content-type': 'application/json',
+      'Authorization': 'Bearer ' + tokenService.getToken()
+    },
   }).then(res => res.json());
 }
