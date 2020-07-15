@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import HorseMarketplace from '../../components/HorseMarketplace/HorseMarketplaces';
-import ListHorse from '../../components/ListHorse/ListHorse';
+import AddListHorse from '../../components/AddListHorse/AddListHorse';
 import HorseCard from '../../components/HorseCard/HorseCard';
 import Barn from '../../components/BarnImg/BarnImg'
 import Footer from '../../components/Footer/Footer'
@@ -11,6 +11,7 @@ import userService from '../../services/userServices'
 import horsesServices from '../../services/horseServices'
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+import horseServices from '../../services/horseServices';
 
 
 class App extends Component {
@@ -18,19 +19,37 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      ...this.getInitialState(),
       horses: [],
       user: userService.getUser()
     };
   }
 
-  getInitialState() {
-    return {
-      horses: '',
-      isAvailable: true
-    };
-  }
+
   /*--- Handle Methods ---*/
+
+  handleAddHorse = async newHorseData => {
+    const newHorse = await horseServices.create(newHorseData);
+    console.log(newHorse);
+    this.setState(state => ({
+      horses: [...state.horses, newHorse]
+    }),
+    // Using cb to wait for state to update before rerouting
+    () => this.props.history.push('/'));
+    console.log(this.setState);
+  }
+
+  handleUpdateHorse = async updatedHorseData => {
+    const updatedHorse = await horseServices.update(updatedHorseData);
+    // Using map to replace just the puppy that was updated
+    const newHorseArray = this.state.horses.map(h => 
+      h._id === updatedHorse._id ? updatedHorse : h
+    );
+    this.setState(
+      {horses: newHorseArray},
+      // This cb function runs after state is updated
+      () => this.props.history.push('/')
+    );
+  }
 
   handleLogout = () => {
     userService.logout();
@@ -44,8 +63,11 @@ class App extends Component {
   /*--- Lifecycle Methods ---*/
 
   async componentDidMount() {
-    const scores = await horsesServices.index();
+    console.log('components mounted');
+    const horses = await horsesServices.index();
     this.setState({ horses });
+    console.log(this.state);
+    
   }
 
   render() {
@@ -61,14 +83,21 @@ class App extends Component {
           <Route exact path='/' render={() =>
             <div>
               <Barn />
-              <HorseMarketplace />
-              <ListHorse />
-              <HorseCard />
             </div>
           } />
-          <Route exact path='/all' render={() =>
+          <Route exact path='/marketplace' render={() =>
             <div>
-              <HorseCard />
+              <HorseMarketplace
+                horses={this.state.horses}
+              />
+            </div>
+          } />
+          <Route exact path='/addlisthorse' render={() =>
+            <div>
+              <AddListHorse
+                horses={this.state.horses}
+                handleAddHorse={this.handleAddHorse}
+              />
             </div>
           } />
           <Route exact path='/signup' render={({ history }) =>

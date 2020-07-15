@@ -7,8 +7,8 @@ function Footer() {
   // Import result is the URL of your image
   return(
     <div className='footer'>
-      <img src={barn} alt="Barn" className='barnFooterImg'/>
-      <div>Steed Finder</div>
+      <div className='footer-left'>Created by D. Sheinbein <img src={barn} alt="Barn" className='barnFooterImg'></img></div>
+      <div className='footer-right'>All Rights Reserved, &copy; 2020 Steed Finder</div>
       <div></div>
     </div>
   ) 

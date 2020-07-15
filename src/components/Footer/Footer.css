@@ -1,16 +1,21 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    /* justify-self: flex-end; */
-    align-self: flex-end;
-    width:  100%;
-    background-color: red;
-    padding: 5px 0px;
-    position: absolute;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color:#BF4342;
+    padding: 5px 10px;
+    position: relative;
     bottom: 0px;
 }
 
 .barnFooterImg {
-    width: 20px;
+    width: 25px;
 }
+
+.footer-right {
+    margin-left: 20rem;
+}
+
 

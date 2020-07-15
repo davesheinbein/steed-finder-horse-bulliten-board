@@ -1,0 +1,18 @@
+.horseCard {
+    border: 2px solid black;
+    margin: 10px 10rem;
+}
+
+.panel {
+    border: 2px solid black;
+}
+
+.panelHeading {
+    border-bottom: 2px solid black;
+}
+
+.panelBody {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+}

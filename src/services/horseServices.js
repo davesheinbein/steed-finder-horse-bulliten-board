@@ -1,4 +1,4 @@
-import tokenService from './tokenService';
+import tokenService from './tokenServices';
 
 const BASE_URL = '/api/horses/';
 

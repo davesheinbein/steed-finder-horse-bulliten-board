@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 var horsesCtrl = require('../../controllers/api/horses');
 
-router.get('/marketplace', horsesCtrl.index);
-router.post('/listhorse', checkAuth, horsesCtrl.create);
+router.get('/', horsesCtrl.index);
+router.post('/', checkAuth, horsesCtrl.create);
 
 
 /*--- Helper Functions ---*/

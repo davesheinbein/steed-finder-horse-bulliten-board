@@ -1,9 +1,17 @@
 import React from 'react';
-function HorseMarketplace(){
-   return(
-       <div className='HorseMarketplace'>
-           <h1>HorseMarketplace</h1>
-       </div>
-   )
+import HorseCard from '../HorseCard/HorseCard';
+
+function HorseMarketplace(props) {
+    return (
+        <div className='HorseMarketplace'>
+            {props.horses.map(horse =>
+                <HorseCard
+                    horse={horse}
+                    
+                    key={horse._id}
+                />
+            )}
+        </div>
+    )
 }
 export default HorseMarketplace;

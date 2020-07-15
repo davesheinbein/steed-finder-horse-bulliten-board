@@ -17,7 +17,7 @@ const NavBar = (props) => {
       <div>
         <Link to='/marketplace' className='NavBar-link'>Marketplace</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <Link to='/listhorse' className='NavBar-link'>List Horse</Link>
+        <Link to='/addlisthorse' className='NavBar-link'>List Horse</Link>
       </div>
     </div>
     :
