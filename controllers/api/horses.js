@@ -5,6 +5,7 @@ module.exports = {
    show,
    create,
    delete: deleteOne,
+   update
 }
 
 function index(req, res) {
@@ -19,13 +20,22 @@ async function show(req, res) {
  }
 
 function create(req, res) {
-   req.body.user = req.user
+   req.body.user = req.user._id
    Horse.create(req.body, function (err, horse) {
+      console.log(err, 'err');
       res.status(201).json(horse)
    })
+   
 }
 
 async function deleteOne(req, res) {
    const deletedHorse = await Horse.findByIdAndRemove(req.params.id);
    res.status(200).json(deletedHorse);
  }
+
+
+async function update(req, res) {
+   const updatedHorse = await Horse.findByIdAndUpdate(req.params.id, req.body, {new: true});
+   res.status(200).json(updatedHorse);
+ }
+ 

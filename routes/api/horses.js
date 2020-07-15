@@ -6,6 +6,7 @@ router.get('/', horsesCtrl.index);
 router.get('/:id', horsesCtrl.show);
 router.post('/', checkAuth, horsesCtrl.create);
 router.post('/:id', checkAuth, horsesCtrl.delete);
+router.put('/:id', checkAuth, horsesCtrl.update);
 
 
 /*--- Helper Functions ---*/

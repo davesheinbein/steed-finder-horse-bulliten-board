@@ -11,7 +11,7 @@ class EditHorsePage extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.handleAddHorse(this.state.formData);
+    this.props.handleUpdateHorse(this.state.formData);
   };
 
   handleChange = e => {
@@ -27,7 +27,6 @@ class EditHorsePage extends Component {
       <>
         <h1>Edit Horse</h1>
         <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-
           <div className="form-group">
             <label>Name (required): </label>
             <input

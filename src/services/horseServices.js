@@ -4,7 +4,9 @@ const BASE_URL = '/api/horses/';
 
 export default {
   index,
-  create
+  create,
+  update,
+  delete: deleteOne
 };
 
 function index() {
@@ -22,4 +24,18 @@ function create(horse) {
     body: JSON.stringify(horse)
   };
   return fetch(BASE_URL, options).then(res => res.json());
+}
+
+export function update(horse) {
+  return fetch(`${BASE_URL}/${horse._id}`, {
+    method: 'PUT',
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify(horse)
+  }).then(res => res.json());
+}
+
+export function deleteOne(id) {
+  return fetch(`${BASE_URL}/${id}`, {
+    method: 'DELETE'
+  }).then(res => res.json());
 }
