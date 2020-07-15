@@ -8,6 +8,7 @@ import HorseCard from '../../components/HorseCard/HorseCard';
 import Barn from '../../components/BarnImg/BarnImg'
 import Footer from '../../components/Footer/Footer'
 import userService from '../../services/userServices'
+import horsesServices from '../../services/horseServices'
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 
@@ -18,13 +19,14 @@ class App extends Component {
     super();
     this.state = {
       ...this.getInitialState(),
+      horses: [],
       user: userService.getUser()
     };
   }
 
   getInitialState() {
     return {
-      horse: '',
+      horses: '',
       isAvailable: true
     };
   }
@@ -40,6 +42,11 @@ class App extends Component {
   }
 
   /*--- Lifecycle Methods ---*/
+
+  async componentDidMount() {
+    const scores = await horsesServices.index();
+    this.setState({ horses });
+  }
 
   render() {
     return (

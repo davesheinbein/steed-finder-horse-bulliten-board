@@ -23,6 +23,7 @@ app.use(require('./config/auth'));
 
  /*--- Spot for api routes ---*/
  app.use('/api/users', require('./routes/api/users'));
+ app.use('/api/horses', require('./routes/api/horses'));
 
 /*--- Spot for catch all route ---*/
 

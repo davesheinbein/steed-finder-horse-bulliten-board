@@ -3,9 +3,14 @@ var Schema = mongoose.Schema;
 
 var horseSchema = new Schema({
  name: {type: String, required: true},
- band: {type: String, required: true},
- year: {type: String},
- recordType: String
+ age: {type: Number, required: true},
+ Catergories: {type: String, required: true},
+ breed: {type: String},
+ price: {type: Number, required: true},
+ location: {type: String},
+ Contact: {type: String, required: true},
+ image: {type: String},
+ user: {type: OnjectId},
 },{
  timestamps: true
 });
