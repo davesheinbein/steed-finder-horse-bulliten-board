@@ -1,0 +1,20 @@
+.container {
+    margin: 2em 16em;
+    padding: 1em 2em;
+    text-align: start;
+}
+
+input {
+    min-width: auto;
+    width: 100%;
+}
+
+.btn {
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+}
+
+.btn:hover {
+    transform: rotateY(180deg);
+}

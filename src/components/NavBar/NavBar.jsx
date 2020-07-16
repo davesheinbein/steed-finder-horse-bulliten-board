@@ -12,7 +12,7 @@ const NavBar = (props) => {
         <span className='NavBar-welcome'>Welcome, {props.user.name}</span>
       </div>
       <div className='mainLogoText'>
-        Steed Finder
+        <Link to='' className='NavBar-link mainLogoText'>Steed Finder</Link>
       </div>
       <div>
         <Link to='/marketplace' className='NavBar-link'>Marketplace</Link>
@@ -28,10 +28,12 @@ const NavBar = (props) => {
         <Link to='/signup' className='NavBar-link'>SIGN UP</Link>
       </div>
       <div className='mainLogoText'>
-        Steed Finder
+        <Link to='' className='NavBar-link mainLogoText'>Steed Finder</Link>
       </div>
       <div>
-        Placeholder
+        <Link to='/marketplace' className='NavBar-link'>Marketplace</Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to='/addlisthorse' className='NavBar-link'>List Horse</Link>
       </div>
     </div>;
 

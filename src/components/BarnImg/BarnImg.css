@@ -10,6 +10,17 @@
     text-align: center;
     width: 100%;
     margin: -40px -0px;
+    position: relative;
+    animation: titleTextAnim;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    left: 0px;
+}
+
+@keyframes titleTextAnim {
+    0%   {left: -1500px;}
+    100% {left: 0px;}
 }
 
 .subTitleText {
@@ -18,4 +29,46 @@
     text-align: center;
     width: 100%;
     margin: -60px -0px;
+    position: relative;
+    animation: subTitleTextAnim;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    right: 0px;
 }
+
+@keyframes subTitleTextAnim {
+    0%   {left: -1500px;}
+    100% {left: 0px;}
+  }
+
+.barnImg {
+    margin-top: 3em;
+    position: relative;
+    animation: barnAnim;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+@keyframes barnAnim {
+    0%   {opacity: 0%;}
+    100% {opacity: 100%;}
+  }
+
+.subMessage {
+    position: relative;
+    margin: 60px -0px;
+    font-size: 1rem;
+    animation: subMessageAnim;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+}
+
+@keyframes subMessageAnim {
+    0%   {opacity: 0%;}
+    100% {opacity: 100%;}
+  }

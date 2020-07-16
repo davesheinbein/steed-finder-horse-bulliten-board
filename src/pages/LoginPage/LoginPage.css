@@ -4,37 +4,69 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-  }
+    margin: 4em 8em;
+}
 
-  .header-footer {
-    height: 10px;
-    color: #BF4342;
-    font-size: 60px;
-    margin: 0 0 5rem;
-  }
+.header-footer {
+  height: 10px;
+  color: #BF4342;
+  font-size: 60px;
+  margin: 0 0 5rem;
+}
 
-  button {
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-  }
-  button:hover {
-    background-color: white;
-    color: #BF4342;
-    border-radius: 5px;
-    padding: 5px;
-  }
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
 
-  .cancelLink {
-    color: #BF4342;
-    text-decoration: none;
-    padding: 5px;
-  }
-  .cancelLink:hover {
-    color: white;
-    background-color: #BF4342;
-    border-radius: 5px;
-    padding: 0px 5px;
-  }
+button:hover {
+  background-color: white;
+  color: #BF4342;
+  border-radius: 5px;
+  padding: 5px;
+  transform: rotateY(180deg);
+}
 
-  
+.cancelLink {
+  margin-left: auto;
+  color: #BF4342;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0px 5px;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+.cancelLink:hover {
+  color: white;
+  background-color: #BF4342;
+  border-radius: 5px;
+  padding: 0px 5px;
+  transform: rotateY(180deg);
+}
+
+.form-control {
+  width: 100%;
+}
+
+.form-horizontal {
+  width: 70%;
+  margin: auto;
+}
+
+.form-label {
+  display: flex;
+  justify-content: start;
+}
+
+.form-group-btns {
+  display: flex;
+}
+
+.btn-default {
+  margin: 5px;
+}

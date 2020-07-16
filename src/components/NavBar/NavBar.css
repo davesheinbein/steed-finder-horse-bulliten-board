@@ -8,17 +8,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0px 5px;
 }
 
 .NavBar-link {
     color: whitesmoke;
     text-decoration: none;
+    padding: 0px 5px;
 }
 .NavBar-link:hover {
     color: white;
     background-color: #BF4342;
     border-radius: 10px;
-    padding: 0px 5px;
+}
+
+.NavBar-link:active {
+    color: white;
+    background-color: #BF4342;
+    border-radius: 10px;
 }
 
 .NavBar-welcome {
@@ -31,12 +38,24 @@
 .NavBar-header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* justify-content: space-around; */
     width: 100%;
     margin: 0px 1rem;
+    position: relative;
+    animation: navAnim;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
+
+@keyframes navAnim {
+    0%   {top: -50px;}
+    100% {top: 0px;}
+  }
 
 .mainLogoText {
     text-align: center;
+    color: #BF4342;
+    text-decoration: double underline;
+    /* font-size: 30px; */
 }
 

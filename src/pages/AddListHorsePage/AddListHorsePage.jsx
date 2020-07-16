@@ -38,10 +38,10 @@ class ListHorse extends Component {
         <div className={styles.container}>
           <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label>Name (required): </label>
               <input
-                className="form-control"
+                className={styles.formControl}
                 name="name"
                 value={this.state.formData.name}
                 onChange={this.handleChange}
@@ -49,30 +49,30 @@ class ListHorse extends Component {
               />
             </div>
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label>Age: </label>
               <input
-                className="form-control"
+                className={styles.formControl}
                 name="age"
                 value={this.state.formData.age}
                 onChange={this.handleChange}
               />
             </div>
 
-            {/* <div className="form-group">
+            {/* <div className={styles.formGroup}>
             <label>Categories: </label>
             <input
-              className="form-control"
+              className={styles.formControl}
               name="catergories"
               value={this.state.formData.catergories}
               onChange={this.handleChange}
             />
           </div> */}
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label>Breed (required): </label>
               <input
-                className="form-control"
+                className={styles.formControl}
                 name="breed"
                 value={this.state.formData.breed}
                 onChange={this.handleChange}
@@ -80,10 +80,10 @@ class ListHorse extends Component {
               />
             </div>
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label>$ Price (required): </label>
               <input
-                className="form-control"
+                className={styles.formControl}
                 name="price"
                 value={this.state.formData.price}
                 onChange={this.handleChange}
@@ -91,10 +91,10 @@ class ListHorse extends Component {
               />
             </div>
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label>Location (City, State) (required): </label>
               <input
-                className="form-control"
+                className={styles.formControl}
                 name="location"
                 value={this.state.formData.location}
                 onChange={this.handleChange}
@@ -102,10 +102,10 @@ class ListHorse extends Component {
               />
             </div>
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label>Contact Number # (required): </label>
               <input
-                className="form-control"
+                className={styles.formControl}
                 name="contact"
                 value={this.state.formData.contact}
                 onChange={this.handleChange}
@@ -113,10 +113,10 @@ class ListHorse extends Component {
               />
             </div>
 
-            {/* <div className="form-group">
+            {/* <div className={styles.formGroup}>
             <label>Horse's Image link (required): </label>
             <input
-              className="form-control"
+              className={styles.formControl}
               name="image"
               value={this.state.formData.image}
               onChange={this.handleChange}
@@ -126,7 +126,7 @@ class ListHorse extends Component {
 
             <button
               type="submit"
-              className="btn"
+              className={styles.btn}
               disabled={this.state.invalidForm}
             >
               Add+ Horse

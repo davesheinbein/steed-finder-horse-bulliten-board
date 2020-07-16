@@ -43,11 +43,12 @@ class SignupForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className='SignupForm'>
         <header className="header-footer">Sign Up</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
           <div className="form-group">
             <div className="col-sm-12">
+              <label className='form-label'>Name:</label>
               <input
                 type="text"
                 className="form-control"
@@ -61,6 +62,7 @@ class SignupForm extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12">
+              <label className='form-label'>Email:</label>
               <input
                 type="email"
                 className="form-control"
@@ -74,30 +76,33 @@ class SignupForm extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12">
+              <label className='form-label'>Location:</label>
               <input
                 type="location"
                 className="form-control"
                 placeholder="Location (City, State)"
                 value={this.state.location}
                 name="location"
-                onChange={this.handleChange} 
-                />
+                onChange={this.handleChange}
+              />
             </div>
           </div>
           <div className="form-group">
             <div className="col-sm-12">
+              <label className='form-label'>Phone Number:</label>
               <input
                 type="contactNumber"
                 className="form-control"
                 placeholder="Contact Number #"
                 value={this.state.contactNumber}
                 name="contactNumber"
-                onChange={this.handleChange} 
-                />
+                onChange={this.handleChange}
+              />
             </div>
           </div>
           <div className="form-group">
             <div className="col-sm-12">
+              <label className='form-label'>Password:</label>
               <input
                 type="password"
                 className="form-control"
@@ -111,6 +116,7 @@ class SignupForm extends Component {
           </div>
           <div className="form-group">
             <div className="col-sm-12">
+              <label className='form-label'>Confirm Password:</label>
               <input
                 type="password"
                 className="form-control"

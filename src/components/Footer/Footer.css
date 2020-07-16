@@ -1,21 +1,34 @@
 .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
     background-color:#BF4342;
     padding: 5px 10px;
-    position: relative;
+    /* position: absolute; */
     bottom: 0px;
+    animation-name: content;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
+@keyframes content {
+    0%   {bottom: -50px;}
+    100% {bottom: 0;}
+  }
+
 .barnFooterImg {
-    width: 25px;
+    width: 2em;
+}
+
+.footer-left {
+    margin-left: 1rem;
 }
 
 .footer-right {
-    margin-left: 20rem;
+    margin-left: auto;
+    margin-right: 1rem;
 }
 
 
