@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './AddListHorsePage.module.css'
 
 class ListHorse extends Component {
   state = {
