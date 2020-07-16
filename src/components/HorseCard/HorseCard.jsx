@@ -7,30 +7,59 @@ function HorseCard({ horse }) {
         <div className={styles.horseCard}>
             <div className={styles.panel}>
                 <div className={styles.panelHeading}>
-                    <h3 className={styles.panelTitle}>{horse.name}</h3>
+                    <div className={styles.panelTitle}>{horse.name}</div>
                     <div>{horse.image}</div>
                 </div>
                 <div className={styles.panelBody}>
                     <dl>
-                        <dt>Name: </dt>
-                        <dd>{horse.name}</dd>
-                        <dt>Age: </dt>
-                        <dd>{horse.age}</dd>
-                        <dt>Breed: </dt>
-                        <dd>{horse.breed}</dd>
-                        <dt>Price: </dt>
-                        <dd>{horse.price}</dd>
-                        <dt>Location: </dt>
-                        <dd>{horse.location}</dd>
-                        <dt>Contact #: </dt>
-                        <dd>{horse.location}</dd>
+                        <div className={styles.reAlign}>
+                            <dt>Name: </dt>
+                            <dd>{horse.name}</dd>
+                        </div>
+                        <div className={styles.reAlign}>
+                            <dt>Age: </dt>
+                            <dd>{horse.age}</dd>
+                        </div>
+                        <div className={styles.reAlign}>
+                            <dt>Breed: </dt>
+                            <dd>{horse.breed}</dd>
+                        </div>
+                        <div className={styles.reAlign}>
+                            <dt>Price: </dt>
+                            <dd>{horse.price}</dd>
+                        </div>
+                        <div className={styles.reAlign}>
+                            <dt>Location: </dt>
+                            <dd>{horse.location}</dd>
+                        </div>
+                        <div className={styles.reAlign}>
+                            <dt>Contact #: </dt>
+                            <dd>{horse.location}</dd>
+                        </div>
                     </dl>
                 </div>
-                <div>
-                    <p>{horse.comments}</p>
-                </div>
                 <div className={styles.panelFooter}>
-                    <Link to='/marketplace'>RETURN TO LIST</Link>
+                    <Link
+                        className={styles.panelEditBtn}
+                        to={{
+                            pathname: '/edit',
+                            state: { horse }
+                        }}
+                    >
+                        EDIT
+                    </Link>
+                    <Link
+                        to='/marketplace'
+                        className={styles.panelReturnBtn}
+                    >
+                        RETURN TO LIST
+                    </Link>
+                    <button
+                        className={styles.panelDeleteBtn}
+                        // onClick={() => handleDeleteHorse(horse._id)} //breaks code need to figure out how to make sure props is being passed.
+                    >
+                        DELETE
+                    </button>
                 </div>
             </div>
         </div>

@@ -5,14 +5,9 @@ const commentsSchema = new Schema(
     {
       content: {
         type: String,
+        required: true
       },
       createdby: { type: Schema.Types.ObjectId, ref: "User" },
-      rating: {
-        type: Number,
-        min: 0,
-        max: 10,
-        default: 10,
-      },
     },
     { timestamps: true }
   );

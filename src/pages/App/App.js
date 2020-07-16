@@ -16,6 +16,7 @@ import EditHorsePage from '../../pages/EditHorsePage/EditHorsePage';
 
 import userService from '../../services/userServices';
 import horseServices from '../../services/horseServices';
+// import commentServices from '../../services/commentServices';
 
 
 class App extends Component {
@@ -27,7 +28,6 @@ class App extends Component {
       user: userService.getUser()
     };
   }
-
 
   /*--- Handle Methods ---*/
 
@@ -45,7 +45,6 @@ class App extends Component {
   handleUpdateHorse = async updatedHorseData => {
     console.log('hitting update horse');
     const updatedHorse = await horseServices.update(updatedHorseData);
-    // Using map to replace just the puppy that was updated
     const newHorseArray = this.state.horses.map(h =>
       h._id === updatedHorse._id ? updatedHorse : h
     );
@@ -62,11 +61,45 @@ class App extends Component {
     console.log('hitting handle delete');
     await horseServices.delete(id);
     this.setState(state => ({
-      // Yay, filter returns a NEW array
       horses: state.horses.filter(h => h._id !== id)
     }), () => this.props.history.push('/marketplace'));
     console.log(this.setState, 'this.setState');
   }
+  // handleAddComment = async newCommentData => {
+  //   const newComment = await commentServices.create(newCommentData);
+  //   // console.log(newComment);
+  //   this.setState(state => ({
+  //     comments: [...state.comments, newComment]
+  //   }),
+  //     // Using cb to wait for state to update before rerouting
+  //     () => this.props.history.push('/'));
+  //   // console.log(this.setState);
+  // }
+
+  // handleUpdateComment = async updatedCommentData => {
+  //   console.log('hitting update comment');
+  //   const updatedComment = await commentServices.update(updatedCommentData);
+  //   const newCommentArray = this.state.comments.map(h =>
+  //     h._id === updatedComment._id ? updatedComment : h
+  //   );
+  //   // console.log(newCommentArray, 'newCommentArray');
+  //   this.setState(
+  //     { comments: newCommentArray },
+  //     // This cb function runs after state is updated
+  //     () => this.props.history.push('/marketplace')
+  //     );
+  //     console.log(this.setState, 'this.setState');
+  // }
+
+  // handleDeleteComment = async id => {
+  //   console.log('hitting handle delete');
+  //   await commentServices.delete(id);
+  //   this.setState(state => ({
+  //     // Yay, filter returns a NEW array
+  //     comments: state.comments.filter(c => c._id !== id)
+  //   }), () => this.props.history.push('/marketplace'));
+  //   console.log(this.setState, 'this.setState');
+  // }
 
   handleLogout = () => {
     userService.logout();

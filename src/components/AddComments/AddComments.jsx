@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class InputComment extends Component {
+class AddComment extends Component {
     state = {
         invalidForm: false,
         formData: this.props.location.state.horse.comments
@@ -28,28 +28,12 @@ class InputComment extends Component {
                 <h1>Comment</h1>
                 <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label>Createdby (required): </label>
-                        <input
-                            className="form-control"
-                            name="createdby"
-                            value={this.state.formData.createdby}
-                            onChange={this.handleChange}
-                            required
-                        />
+                        <label>Creator: </label>
+                        <div>{horse.comments.createdby}</div>  {/* want to the username of the person who comments here */}
                     </div>
 
                     <div className="form-group">
-                        <label>Rating: </label>
-                        <input
-                            className="form-control"
-                            name="rating"
-                            value={this.state.formData.rating}
-                            onChange={this.handleChange}
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label>Content: </label>
+                        <label>Comment: </label>
                         <input
                             className="form-control"
                             name="catergories"
@@ -63,13 +47,13 @@ class InputComment extends Component {
                         className="btn"
                         disabled={this.state.invalidForm}
                     >
-                        Save Horse
-                </button>&nbsp;&nbsp;
-                <Link to='/'>CANCEL</Link>
+                        Enter
+                    </button>&nbsp;&nbsp;
+                    <Link to='/'>CANCEL</Link>
                 </form>
             </>
         );
     }
 }
 
-export default InputComment;
+export default AddComment;

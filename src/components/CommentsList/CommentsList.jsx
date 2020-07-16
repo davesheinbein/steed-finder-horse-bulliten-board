@@ -1,13 +1,12 @@
 import React from 'react';
 import Comments from '../../components/Comments/Comments'
-import AddComment from '../../components/AddComments/AddComments'
 
 function HorseMarketplace(props) {
     return (
         <div className='HorseMarketplace'>
             <h1>Comments</h1>
             <AddComment />
-            {props.horses.map(horse =>
+            {props.horses.comments.map(horse =>
                 <Comments
                     handleDeleteComment={props.handleDeleteComment}
                     comment={horse.comments}

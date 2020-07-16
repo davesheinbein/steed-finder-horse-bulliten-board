@@ -4,7 +4,12 @@
 }
 
 .panel {
-    border: 2px solid black;
+    border: 5px solid black;
+}
+
+.panelTitle {
+    font-size: 4rem;
+    font-weight: bolder;
 }
 
 .panelHeading {
@@ -15,4 +20,30 @@
     display: flex;
     flex-direction: column;
     border-bottom: 2px solid black;
+    font-size: 2.5rem;
+}
+
+.panelFooter {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+}
+
+.panelReturnBtn, .panelEditBtn {
+    color: #BF4342;
+    padding: 0px 5px;
+    text-decoration: none;
+}
+.panelReturnBtn:hover, .panelEditBtn:hover {
+    color: white;
+    background-color: #BF4342;
+    border-radius: 5px;
+}
+
+.reAlign {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin: 0px 10%;
 }

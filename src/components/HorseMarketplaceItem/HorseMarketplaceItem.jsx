@@ -6,20 +6,21 @@ function HorseMarketplaceItem({horse, handleDeleteHorse}) {
   return (
     <div className={styles.panel}>
       <div className={styles.panelHeading}>
-        <h3 className={styles.panelTitle}>{horse.name}</h3>
-        <h3 className={styles.panelSubTitle}>{horse.location}</h3>
+        <div className={styles.panelTitle}>{horse.name}</div>
+        <div className={styles.panelSubTitle}>{horse.location}</div>
       </div>
-      <div className={styles.panelDetails}>
-        <Link
-          className={styles.panelDetailsBtn}
-          to={{
-            pathname: '/details',
-            state: {horse}
-          }}
-        >
-          DETAILS
-        </Link>
-        <br></br>
+      <div className={styles.actionBtns}>
+          <div className={styles.panelDetails}>
+          <Link
+            className={styles.panelDetailsBtn}
+            to={{
+              pathname: '/details',
+              state: {horse}
+            }}
+          >
+            DETAILS
+          </Link>
+        </div>
         <Link
           className={styles.panelEditBtn}
           to={{
@@ -29,7 +30,6 @@ function HorseMarketplaceItem({horse, handleDeleteHorse}) {
         >
           EDIT
         </Link>
-        <br></br>
         <button
           className={styles.panelBtn}
           onClick={() => handleDeleteHorse(horse._id)}

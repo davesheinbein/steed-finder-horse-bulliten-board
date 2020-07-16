@@ -1,5 +1,6 @@
 import React from 'react';
 import HorseMarketplaceItem from '../../components/HorseMarketplaceItem/HorseMarketplaceItem'
+import './HorseMarketplacePage.css'
 
 function HorseMarketplace(props) {
     return (
