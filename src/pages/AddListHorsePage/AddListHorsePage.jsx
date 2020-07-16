@@ -7,12 +7,12 @@ class ListHorse extends Component {
     formData: {
       name: '',
       age: '',
-    //   catergories: '',
+      //   catergories: '',
       breed: '',
       price: '',
       location: '',
       contact: '',
-    //   image: '',
+      //   image: '',
     }
   };
 
@@ -24,7 +24,7 @@ class ListHorse extends Component {
   };
 
   handleChange = e => {
-    const formData = {...this.state.formData, [e.target.name]: e.target.value};
+    const formData = { ...this.state.formData, [e.target.name]: e.target.value };
     this.setState({
       formData,
       invalidForm: !this.formRef.current.checkValidity()
@@ -35,30 +35,31 @@ class ListHorse extends Component {
     return (
       <>
         <h1>Add Horse</h1>
-        <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
+        <div className={styles.container}>
+          <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
 
-          <div className="form-group">
-            <label>Name (required): </label>
-            <input
-              className="form-control"
-              name="name"
-              value={this.state.formData.name}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
+            <div className="form-group">
+              <label>Name (required): </label>
+              <input
+                className="form-control"
+                name="name"
+                value={this.state.formData.name}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
 
-          <div className="form-group">
-            <label>Age: </label>
-            <input
-              className="form-control"
-              name="age"
-              value={this.state.formData.age}
-              onChange={this.handleChange}
-            />
-          </div>
+            <div className="form-group">
+              <label>Age: </label>
+              <input
+                className="form-control"
+                name="age"
+                value={this.state.formData.age}
+                onChange={this.handleChange}
+              />
+            </div>
 
-          {/* <div className="form-group">
+            {/* <div className="form-group">
             <label>Categories: </label>
             <input
               className="form-control"
@@ -68,51 +69,51 @@ class ListHorse extends Component {
             />
           </div> */}
 
-          <div className="form-group">
-            <label>Breed (required): </label>
-            <input
-              className="form-control"
-              name="breed"
-              value={this.state.formData.breed}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
+            <div className="form-group">
+              <label>Breed (required): </label>
+              <input
+                className="form-control"
+                name="breed"
+                value={this.state.formData.breed}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
 
-          <div className="form-group">
-            <label>$ Price (required): </label>
-            <input
-              className="form-control"
-              name="price"
-              value={this.state.formData.price}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
+            <div className="form-group">
+              <label>$ Price (required): </label>
+              <input
+                className="form-control"
+                name="price"
+                value={this.state.formData.price}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
 
-          <div className="form-group">
-            <label>Location (City, State) (required): </label>
-            <input
-              className="form-control"
-              name="location"
-              value={this.state.formData.location}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
+            <div className="form-group">
+              <label>Location (City, State) (required): </label>
+              <input
+                className="form-control"
+                name="location"
+                value={this.state.formData.location}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
 
-          <div className="form-group">
-            <label>Contact Number # (required): </label>
-            <input
-              className="form-control"
-              name="contact"
-              value={this.state.formData.contact}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
+            <div className="form-group">
+              <label>Contact Number # (required): </label>
+              <input
+                className="form-control"
+                name="contact"
+                value={this.state.formData.contact}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
 
-          {/* <div className="form-group">
+            {/* <div className="form-group">
             <label>Horse's Image link (required): </label>
             <input
               className="form-control"
@@ -123,14 +124,15 @@ class ListHorse extends Component {
             />
           </div> */}
 
-          <button
-            type="submit"
-            className="btn"
-            disabled={this.state.invalidForm}
-          >
-            Add+ Horse
+            <button
+              type="submit"
+              className="btn"
+              disabled={this.state.invalidForm}
+            >
+              Add+ Horse
           </button>
-        </form>
+          </form>
+        </div>
       </>
     );
   }
