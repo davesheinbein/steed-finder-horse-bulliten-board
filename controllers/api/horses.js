@@ -2,7 +2,7 @@ const Horse = require('../../models/horse');
 
 module.exports = {
    index,
-   show,
+   // show,
    create,
    delete: deleteOne,
    update
@@ -14,10 +14,11 @@ function index(req, res) {
    })
 }
 
-async function show(req, res) {
-   const Horse = await Horse.findById(req.params.id);
-   res.status(200).json(horse);
- }
+// async function show(req, res) {
+//    console.log('HITTING SHOW');
+//    const Horse = await Horse.findById(req.params.id);
+//    res.status(200).json(horse);
+//  }
 
 function create(req, res) {
    req.body.user = req.user._id
@@ -25,7 +26,6 @@ function create(req, res) {
       console.log(err, 'err');
       res.status(201).json(horse)
    })
-   
 }
 
 async function deleteOne(req, res) {

@@ -33,13 +33,13 @@ class App extends Component {
 
   handleAddHorse = async newHorseData => {
     const newHorse = await horseServices.create(newHorseData);
-    console.log(newHorse);
+    // console.log(newHorse);
     this.setState(state => ({
       horses: [...state.horses, newHorse]
     }),
       // Using cb to wait for state to update before rerouting
       () => this.props.history.push('/'));
-    console.log(this.setState);
+    // console.log(this.setState);
   }
 
   handleUpdateHorse = async updatedHorseData => {
@@ -59,11 +59,13 @@ class App extends Component {
   }
 
   handleDeleteHorse = async id => {
+    console.log('hitting handle delete');
     await horseServices.delete(id);
     this.setState(state => ({
       // Yay, filter returns a NEW array
       horses: state.horses.filter(h => h._id !== id)
-    }), () => this.props.history.push('/'));
+    }), () => this.props.history.push('/marketplace'));
+    console.log(this.setState, 'this.setState');
   }
 
   handleLogout = () => {
@@ -120,6 +122,8 @@ class App extends Component {
             <div>
               <HorseDetailPage
                 location={location}
+                handleUpdateHorse={this.handleUpdateHorse}
+                handleDeleteHorse={this.handleDeleteHorse}
               />
             </div>
           } />

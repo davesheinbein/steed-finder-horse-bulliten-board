@@ -1,11 +1,11 @@
 import React from 'react';
-import HorseMarketplaceItem from '../../components/HorseMarketplaceItem/HorseMarketplaceItem'
+import Comments from '../../components/Comments/Comments'
 
 function HorseMarketplace(props) {
     return (
         <div className='HorseMarketplace'>
             {props.horses.map(horse =>
-                <HorseMarketplaceItem
+                <Comments
                     handleDeleteHorse={props.handleDeleteHorse}
                     horse={horse}
                     key={horse._id}
