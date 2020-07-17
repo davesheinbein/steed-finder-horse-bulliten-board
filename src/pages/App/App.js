@@ -67,6 +67,46 @@ class App extends Component {
     console.log(this.setState, 'this.setState');
   }
 
+  // Handle comments
+  handleAddComment = async (id, newCommentData) => {
+    const comAwait = await commentServices.create(id, newCommentData);
+    // console.log(comAwait);
+    const newHorseArray = this.state.horses.map(h => {
+      // h._id === id ? h.comments.push(comAwait) : h
+      if (h._id === id) {
+        h.comments = comAwait.comments
+      } else {
+
+      }
+      return h
+    }
+    );
+    // console.log(newHorseArray, 'newHorseArray with comments');
+    this.setState(
+      { horses: newHorseArray },
+      // This cb function runs after state is updated
+      () => this.props.history.push('/details')
+    );    // console.log(this.setState);
+  }
+
+  handleDeleteComment = async id => {
+    // console.log('hitting handle delete');
+    await commentServices.delete(id);
+    this.setState(state => ({
+      comments: state.comments.filter(c => c._id !== id)
+    })), () => this.props.history.push('/details')
+  }
+      // const newComments = this.state.comments.filter(comment => {
+      //   return comment._id !== id
+      // })
+      // console.log(newComments, 'New Comment');
+  
+      // this.setState((state) => ({
+      //   comment: newComments
+      // }))
+  // Need to Fix handleDeleteComment
+
+
   handleLogout = () => {
     userService.logout();
     this.setState({ user: null });
@@ -124,6 +164,7 @@ class App extends Component {
                 location={location}
                 handleUpdateHorse={this.handleUpdateHorse}
                 handleDeleteHorse={this.handleDeleteHorse}
+                handleAddComment={this.handleAddComment}
                 handleDeleteComment={this.handleDeleteComment}
               />
             </div>

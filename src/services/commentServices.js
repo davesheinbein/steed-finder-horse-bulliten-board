@@ -16,7 +16,7 @@ function create(horseid, formData) {
             'Authorization': 'Bearer ' + tokenService.getToken()
         },
         body: JSON.stringify(formData)
-    })
+    }).then(res => res.json());
 }
 
 function deleteOne(id) {

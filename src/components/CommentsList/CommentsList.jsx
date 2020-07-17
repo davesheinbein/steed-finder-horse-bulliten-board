@@ -1,6 +1,6 @@
 import React from 'react';
 import Comment from '../../components/Comment/Comment'
-import AddComment from '../AddComments/AddComments'
+import AddComment from '../../components/AddComments/AddComments'
 
 function CommentsList(props) {
     // console.log(props, '< props');
@@ -9,9 +9,10 @@ function CommentsList(props) {
             <h1>Comments</h1>
             <AddComment
                 horse={props.horse}
+                handleAddComment={props.handleAddComment}
             />
             {
-                props.comments.map(comment => {
+                props.horse.comments.map(comment => {
                     return <
                         Comment
                         comment={comment}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import styles from './AddComments.module.css'
-import CommentService from '../../services/commentServices'
+// import CommentService from '../../services/commentServices'
 
 
 // import user from '../../../models/user';
@@ -19,17 +19,7 @@ class AddComment extends Component {
 
     handleSubmit = async e => {
         e.preventDefault();
-        try {
-           let comAwait = await CommentService.create(this.props.horse._id, this.state.formData)
-           
-        } catch (e) {
-            console.log('error');
-        }
-
-        // console.log(this.props);
-        // console.log(this.props.horse._id);
-        // console.log(this.state.formData);
-
+        this.props.handleAddComment(this.props.horse._id, this.state.formData);
     };
 
 
@@ -48,7 +38,6 @@ class AddComment extends Component {
                     <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
                         <div className={styles.formGroup}>
                             <label className={styles.formLabel}>Creator: </label>
-                            {/* <div>{user._id}</div>   */}
                             <input
                                 className={styles.formControl}
                                 name="creator"

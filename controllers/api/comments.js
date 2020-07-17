@@ -11,18 +11,21 @@ function createHorseComment(req, res) {
     // console.log(req.body); // { creator: '', comment: '' }
     Horse.findById(req.params.horseid, function (err, horse) {
         horse.comments.push(req.body);
-        horse.save(function (err, horse) {
+        horse.save(function (err, h) {
             // res.redirect(`/details`);
             // console.log(horse);
             // console.log(err);
+            res.status(200).json(horse)
         });
     });
 }
 
+
+
 function deleteHorseComment(req, res) {
     // console.log(req.params, 'req.params');
     console.log(req.params.id, 'req.params.id');
-    
+
     Horse.findOne({ "comments._id": req.params.id }, function (err, horse) {
         const comment = horse.comments.id(req.params.id);
         console.log(comment, 'comment');

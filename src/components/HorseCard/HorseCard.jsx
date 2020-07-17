@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './HorseCard.module.css'
 
-function HorseCard({ horse }) {
+function HorseCard({ horse, handleDeleteHorse }) {
     return (
         <div className={styles.horseCard}>
             <div className={styles.panel}>
@@ -56,7 +56,7 @@ function HorseCard({ horse }) {
                     </Link>
                     <button
                         className={styles.panelDeleteBtn}
-                        // onClick={() => handleDeleteHorse(horse._id)} //breaks code need to figure out how to make sure props is being passed.
+                        onClick={() => handleDeleteHorse(horse._id)} //breaks code need to figure out how to make sure props is being passed.
                     >
                         DELETE
                     </button>

@@ -23,7 +23,7 @@ function Comment(props) {
                 <div className={styles.actionBtn}>
                     <button
                         className={styles.panelDeleteBtn}
-                        onClick={() => props.handleDeleteComment(props.comment._id)} 
+                        onClick={() => props.handleDeleteComment(props.comment._id)}
                     >
                         DELETE
                 </button>
