@@ -7,8 +7,10 @@ import styles from './HorseDetailsPage.module.css'
 
 class HorseDetailPage extends Component {
     horse = this.props.location.state.horse;
+    comment = this.props.location.state.horse.comment;
     render() {
         // console.log(horse, '<hitting horse');
+        console.log(this.horse, 'this.horse');
         return (
             <>
                 <div className={styles.detailsTitle}>Horse Details</div>
@@ -18,11 +20,13 @@ class HorseDetailPage extends Component {
                         key={this.horse._id}
                         horse={this.horse}
                         />
+                        
                     <CommentsList
                         handleAddComment={this.props.handleAddComment}
                         handleDeleteComment={this.props.handleDeleteComment}
-                        key={this.horse._id}
-                        horse={this.horse}
+                        horse={this.horse} // need to be in here
+                        // key={this.horse.idx} //New Key
+                        comment={this.comment} // probably don't
                     />
                 </div>
             </>

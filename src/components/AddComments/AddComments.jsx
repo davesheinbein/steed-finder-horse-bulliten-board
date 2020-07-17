@@ -60,7 +60,7 @@ class AddComment extends Component {
                             <button
                                 type="submit"
                                 className={styles.btn}
-                            // disabled={this.state.invalidForm}
+                                disabled={this.state.invalidForm}
                             >
                                 Enter
                             </button>&nbsp;&nbsp;

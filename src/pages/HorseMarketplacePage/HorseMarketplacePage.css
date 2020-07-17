@@ -2,3 +2,10 @@
     display: grid;
     grid-template-columns: 2fr 2fr;
 }
+
+.header {
+    height: 10px;
+    color: #BF4342;
+    font-size: 60px;
+    margin: 0 0 5rem;
+}

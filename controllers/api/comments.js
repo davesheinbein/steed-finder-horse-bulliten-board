@@ -20,19 +20,15 @@ function createHorseComment(req, res) {
     });
 }
 
-
-
 function deleteHorseComment(req, res) {
-    // console.log(req.params, 'req.params');
     console.log(req.params.id, 'req.params.id');
-
     Horse.findOne({ "comments._id": req.params.id }, function (err, horse) {
         const comment = horse.comments.id(req.params.id);
-        console.log(comment, 'comment');
-        // console.log(err, 'err');
+        console.log(comment, '<<<<< comment');
+        console.log(err, '<<<<<< err');
         horse.comments.pull(comment);
         horse.save(function (err) {
-            // res.redirect(`/details`);
+            res.json(horse);
         });
     });
 }

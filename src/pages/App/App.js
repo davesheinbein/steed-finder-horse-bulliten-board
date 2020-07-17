@@ -55,7 +55,7 @@ class App extends Component {
       // This cb function runs after state is updated
       () => this.props.history.push('/marketplace')
     );
-    console.log(this.setState, 'this.setState');
+    // console.log(this.setState, 'this.setState');
   }
 
   handleDeleteHorse = async id => {
@@ -64,7 +64,7 @@ class App extends Component {
     this.setState(state => ({
       horses: state.horses.filter(h => h._id !== id)
     }), () => this.props.history.push('/marketplace'));
-    console.log(this.setState, 'this.setState');
+    // console.log(this.setState, 'this.setState');
   }
 
   // Handle comments
@@ -72,11 +72,9 @@ class App extends Component {
     const comAwait = await commentServices.create(id, newCommentData);
     // console.log(comAwait);
     const newHorseArray = this.state.horses.map(h => {
-      // h._id === id ? h.comments.push(comAwait) : h
       if (h._id === id) {
         h.comments = comAwait.comments
       } else {
-
       }
       return h
     }
@@ -90,22 +88,14 @@ class App extends Component {
   }
 
   handleDeleteComment = async id => {
-    // console.log('hitting handle delete');
-    await commentServices.delete(id);
-    this.setState(state => ({
-      comments: state.comments.filter(c => c._id !== id)
-    })), () => this.props.history.push('/details')
+    console.log('hitting handle delete');
+    const deleteRes = await commentServices.delete(id);
+    console.log(deleteRes, 'deleteRes');
+    // console.log(deleteRes.json(), 'deleteRes.json');
+    
+    this.getAll() // need this DON'T DELETE
+    // Need to Fix handleDeleteComment
   }
-      // const newComments = this.state.comments.filter(comment => {
-      //   return comment._id !== id
-      // })
-      // console.log(newComments, 'New Comment');
-  
-      // this.setState((state) => ({
-      //   comment: newComments
-      // }))
-  // Need to Fix handleDeleteComment
-
 
   handleLogout = () => {
     userService.logout();
@@ -118,11 +108,16 @@ class App extends Component {
 
   /*--- Lifecycle Methods ---*/
 
-  async componentDidMount() {
-    // console.log('components mounted');
+  getAll = async () => {
     const horses = await horseServices.index();
     console.log(horses, '< hitting!');
     this.setState({ horses });
+
+  }
+
+  componentDidMount = () => {
+    // console.log('components mounted');
+    this.getAll()
     // console.log(this.state);
   }
 
@@ -161,6 +156,7 @@ class App extends Component {
             <div>
               <HorseDetailPage
                 horses={this.state.horses}
+                comments={this.state.horses.comments} // New
                 location={location}
                 handleUpdateHorse={this.handleUpdateHorse}
                 handleDeleteHorse={this.handleDeleteHorse}

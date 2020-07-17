@@ -10,13 +10,14 @@ function CommentsList(props) {
             <AddComment
                 horse={props.horse}
                 handleAddComment={props.handleAddComment}
+                key={props.horse._id}
             />
             {
                 props.horse.comments.map(comment => {
-                    return <
-                        Comment
+                    return <Comment
                         comment={comment}
                         handleDeleteComment={props.handleDeleteComment}
+                        key={comment._id}
                     />
                 })
             }
