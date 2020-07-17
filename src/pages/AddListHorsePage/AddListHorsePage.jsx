@@ -34,7 +34,7 @@ class ListHorse extends Component {
   render() {
     return (
       <>
-        <h1>Add Horse</h1>
+        <div className={styles.headerFooter}>Add Horse</div>
         <div className={styles.container}>
           <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
 

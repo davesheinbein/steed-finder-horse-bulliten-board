@@ -1,39 +1,35 @@
-import Horse from '../../models/horse'
+const Horse = require('../../models/horse');
 
 module.exports = {
-    createHorseComment,
-    deleteHorseComment,
-    updateHorseCom
+    create: createHorseComment,
+    delete: deleteHorseComment,
 };
 
 function createHorseComment(req, res) {
-    req.body.createdby = req.user._id;
-    Horse.findById(req.params.id, function (err, horse) {
+    // console.log('hittin createHorseComment!!!!!!!');
+    // req.body.createdby = req.user._id;
+    // console.log(req.body); // { creator: '', comment: '' }
+    Horse.findById(req.params.horseid, function (err, horse) {
         horse.comments.push(req.body);
         horse.save(function (err, horse) {
-            res.redirect(`/details`);
+            // res.redirect(`/details`);
+            // console.log(horse);
+            // console.log(err);
         });
     });
 }
 
 function deleteHorseComment(req, res) {
+    // console.log(req.params, 'req.params');
+    console.log(req.params.id, 'req.params.id');
+    
     Horse.findOne({ "comments._id": req.params.id }, function (err, horse) {
         const comment = horse.comments.id(req.params.id);
-        comment.remove();
+        console.log(comment, 'comment');
+        // console.log(err, 'err');
+        horse.comments.pull(comment);
         horse.save(function (err) {
-            res.redirect(`/details`);
-        });
-    });
-}
-
-function updateHorseCom(req, res) {
-    Horse.findById(req.params.id, function (err, horse) {
-        var comment = horse.comments.id(req.params.cid);
-        comment.content = req.body.content;
-        horse.save(function (err) {
-            comment.save(function (e) {
-                res.redirect("/details");
-            });
+            // res.redirect(`/details`);
         });
     });
 }

@@ -20,11 +20,12 @@
     transition-duration: 1s;
     transition-timing-function: ease-in;
 }
+
 .panelDetailsBtn:hover, .panelEditBtn:hover {
     color: white;
     background-color: #BF4342;
     border-radius: 5px;
-    transform: rotateY(360deg);
+    transform: rotateY(180deg);
 }
 
 .panelBtn {
@@ -33,7 +34,7 @@
     transition-timing-function: ease-in;
 }
 .panelBtn:hover {
-    transform: rotateY(360deg);
+    transform: rotateY(180deg);
 }
 
 .panelTitle {

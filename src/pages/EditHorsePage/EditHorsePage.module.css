@@ -1,0 +1,22 @@
+.formContainer {
+    border: 2px solid black;
+    margin: 2em 16em;
+    padding: 1em 2em;
+    text-align: start;
+}
+
+.formLabel {
+    display: flex;
+}
+
+.headerFooter {
+    height: 10px;
+    color: #BF4342;
+    font-size: 60px;
+    margin: 0 0 5rem;
+}
+
+.btnActions {
+    display: flex;
+    justify-content: space-between;
+}

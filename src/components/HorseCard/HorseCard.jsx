@@ -26,7 +26,7 @@ function HorseCard({ horse }) {
                         </div>
                         <div className={styles.reAlign}>
                             <dt>Price: </dt>
-                            <dd>{horse.price}</dd>
+                            <dd>${horse.price}</dd>
                         </div>
                         <div className={styles.reAlign}>
                             <dt>Location: </dt>

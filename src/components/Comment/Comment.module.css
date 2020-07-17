@@ -1,0 +1,31 @@
+.Heading {
+    border: 2px solid black;
+    margin: 0px 10em;
+    border: 2px solid red;
+    padding: 1em 1em;
+}
+
+.panelBody {
+    display: flex;
+    justify-content: start;
+}
+
+.subHeading {
+    display: flex;
+    justify-content: start;
+}
+
+.lines {
+    border: 1px solid black;
+    width: 68vw;
+    margin: 0px auto;
+}
+
+.actionBtn {
+    width: 100%;
+}
+.panelDeleteBtn {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px auto;
+}

@@ -18,3 +18,10 @@ input {
 .btn:hover {
     transform: rotateY(180deg);
 }
+
+.headerFooter {
+    height: 10px;
+    color: #BF4342;
+    font-size: 60px;
+    margin: 0 0 5rem;
+}

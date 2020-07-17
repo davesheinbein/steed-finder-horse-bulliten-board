@@ -1,19 +1,25 @@
 import React from 'react';
-import Comments from '../../components/Comments/Comments'
+import Comment from '../../components/Comment/Comment'
+import AddComment from '../AddComments/AddComments'
 
-function HorseMarketplace(props) {
+function CommentsList(props) {
+    // console.log(props, '< props');
     return (
-        <div className='HorseMarketplace'>
+        <div className='CommentsList'>
             <h1>Comments</h1>
-            <AddComment />
-            {props.horses.comments.map(horse =>
-                <Comments
-                    handleDeleteComment={props.handleDeleteComment}
-                    comment={horse.comments}
-                    key={horse.comments._id}
-                />
-            )}
+            <AddComment
+                horse={props.horse}
+            />
+            {
+                props.comments.map(comment => {
+                    return <
+                        Comment
+                        comment={comment}
+                        handleDeleteComment={props.handleDeleteComment}
+                    />
+                })
+            }
         </div>
     )
 }
-export default HorseMarketplace;
+export default CommentsList;

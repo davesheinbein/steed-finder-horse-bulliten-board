@@ -1,0 +1,17 @@
+.formContainer {
+    /* width: 80%; */
+    margin: 0px 10em;
+    border: 2px solid black;
+    padding: 1em 1em;
+}
+
+.formLabel {
+    display: flex;
+    justify-content: start;
+}
+
+.btnActions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em 0px 0px;
+}

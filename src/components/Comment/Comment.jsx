@@ -1,24 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styles from './Comment.module.css'
 
 
-function Comment({ horse }) {
+function Comment(props) {
+    // console.log(horse);
     return (
-        <div className='Heading'>
-            <div className='panel'>
-                <div className='panelHeading'>
-                    <h3 className='panelTitle'>Comment</h3>
+        <div className={styles.Heading}>
+            <div className={styles.panel}>
+                <div className={styles.panelHeading}>
+                    <div className={styles.panelTitle}>Comment</div>
                 </div>
-                <div className='panelBody'>
+                <div className={styles.panelBody}>
                     <dl>
-                        <dt>Name: </dt>
-                        <dd>{horse.comments.createdby}</dd>
-                        <dt>Comment: </dt>
-                        <dd>{horse.comments.content}</dd>
+                        <dt className={styles.subHeading}>Name: </dt>
+                        <dd>{props.comment.creator}</dd>
+                        <hr className={styles.lines} />
+                        <dt className={styles.subHeading}>Comment: </dt>
+                        <dd>{props.comment.comment}</dd>
+                        <hr className={styles.lines} />
                     </dl>
                 </div>
-                <div className={styles.panelFooter}>
-                    <Link to='/marketplace'>RETURN TO LIST</Link>
+                <div className={styles.actionBtn}>
+                    <button
+                        className={styles.panelDeleteBtn}
+                        onClick={() => props.handleDeleteComment(props.comment._id)} 
+                    >
+                        DELETE
+                </button>
                 </div>
             </div>
         </div>
