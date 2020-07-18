@@ -20,7 +20,14 @@ class AddComment extends Component {
     handleSubmit = async e => {
         e.preventDefault();
         this.props.handleAddComment(this.props.horse._id, this.state.formData);
+        this.setState({
+            formData: {
+                creator: '',
+                comment: ''
+            }
+        })
     };
+    
 
 
     handleChange = e => {
@@ -37,7 +44,7 @@ class AddComment extends Component {
                 <div className={styles.formContainer}>
                     <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
                         <div className={styles.formGroup}>
-                            <label className={styles.formLabel}>Creator: </label>
+                            <label className={styles.formLabel}>User: </label>
                             <input
                                 className={styles.formControl}
                                 name="creator"

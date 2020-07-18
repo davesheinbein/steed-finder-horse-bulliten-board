@@ -88,14 +88,23 @@ class App extends Component {
   }
 
   handleDeleteComment = async id => {
-    console.log('hitting handle delete');
+    // console.log('hitting handle delete');
     const deleteRes = await commentServices.delete(id);
-    console.log(deleteRes, 'deleteRes');
-    // console.log(deleteRes.json(), 'deleteRes.json');
+    const horsesCopy = this.state.horses
+    console.log(deleteRes, '<<<< deleteRes');
+    const newHorses = horsesCopy.map((horse) => {
+      if (horse._id == deleteRes._id) {
+        return deleteRes
+        // horse = deleteRes
+      } else {
+        return horse
+      }
+    });
     
-    this.getAll() // need this DON'T DELETE
-    // Need to Fix handleDeleteComment
+    this.setState({horses: newHorses})
+    this.props.history.push('/details')
   }
+
 
   handleLogout = () => {
     userService.logout();
@@ -112,7 +121,6 @@ class App extends Component {
     const horses = await horseServices.index();
     console.log(horses, '< hitting!');
     this.setState({ horses });
-
   }
 
   componentDidMount = () => {
@@ -122,6 +130,8 @@ class App extends Component {
   }
 
   render() {
+    console.log("we are re rendering");
+    
     return (
       <div className="App">
         <header className="App-header">
@@ -156,7 +166,6 @@ class App extends Component {
             <div>
               <HorseDetailPage
                 horses={this.state.horses}
-                comments={this.state.horses.comments} // New
                 location={location}
                 handleUpdateHorse={this.handleUpdateHorse}
                 handleDeleteHorse={this.handleDeleteHorse}

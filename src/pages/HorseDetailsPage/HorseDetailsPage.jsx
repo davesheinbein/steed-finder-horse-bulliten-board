@@ -9,8 +9,9 @@ class HorseDetailPage extends Component {
     horse = this.props.location.state.horse;
     comment = this.props.location.state.horse.comment;
     render() {
+        console.log(this.comment, '<<<<<< this.comment');
         // console.log(horse, '<hitting horse');
-        console.log(this.horse, 'this.horse');
+        console.log(this.horse, '<<<<<< this.horse');
         return (
             <>
                 <div className={styles.detailsTitle}>Horse Details</div>
@@ -25,7 +26,6 @@ class HorseDetailPage extends Component {
                         handleAddComment={this.props.handleAddComment}
                         handleDeleteComment={this.props.handleDeleteComment}
                         horse={this.horse} // need to be in here
-                        // key={this.horse.idx} //New Key
                         comment={this.comment} // probably don't
                     />
                 </div>
