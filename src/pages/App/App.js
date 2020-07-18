@@ -59,13 +59,21 @@ class App extends Component {
   }
 
   handleDeleteHorse = async id => {
-    console.log('hitting handle delete');
-    await horseServices.delete(id);
-    this.setState(state => ({
-      horses: state.horses.filter(h => h._id !== id)
-    }), () => this.props.history.push('/marketplace'));
-    // console.log(this.setState, 'this.setState');
-  }
+    //for the update history part
+         this.props.history.push({
+            pathname: '/details',
+            state: { horse: Whatever the horse object is that you got back from your server goes here instead of what im typing }
+        });
+   }
+
+  // handleDeleteHorse = async id => {
+  //   console.log('hitting handle delete');
+  //   await horseServices.delete(id);
+  //   this.setState(state => ({
+  //     horses: state.horses.filter(h => h._id !== id)
+  //   }), () => this.props.history.push('/marketplace'));
+  //   // console.log(this.setState, 'this.setState');
+  // }
 
   // Handle comments
   handleAddComment = async (id, newCommentData) => {

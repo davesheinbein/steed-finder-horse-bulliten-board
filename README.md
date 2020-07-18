@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Horse Bulletin Board**
 
-## Available Scripts
+This website showcase RESTful routes, CRUD functionality, and JWT login requirements. 
 
-In the project directory, you can run:
+The websites allow people to post horses and there contact information in the hopes of connecting sellers with potential buyers.
 
-### `npm start`
+You are able to list a horse and leave comments on horses when logged into the website.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshot:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Home Page Sceenshot
+<!-- ![Home Page Sceenshot](screenshots/homepage-screenshot.png?) -->
 
-### `npm test`
+<!-- [Home Page Sceenshot](https://imgur.com/YCEiEr5) -->
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used: 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### 1. HTML
+#### 2. CSS
+#### 3. JavaScript
+#### 4. MongoDB
+#### 5. MongoDB Atlas
+#### 6. Mongoose
+#### 7. Node.js
+#### 8. Express
+#### 9. React
+#### 10. Postman
+#### 11. Heroku
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Click the link to view the website
+[Horse Bulletin Board Webstite](https://horse-bulletin-board.herokuapp.com/) 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Click the link to view the Trello Board
+[Trello Board](https://trello.com/b/QQgGKAnE/ga-project-4)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Click the link to view the ERD
+[ERD](https://app.lucidchart.com/invitations/accept/754f604d-817c-4b95-9d01-6a7b38a1ef31)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Potential Next Steps: 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+##### - [x] Add some animation
+##### - [] Add API
+##### - [] Update Css for media queries
