@@ -8,7 +8,11 @@ function HorseCard({ horse, handleDeleteHorse }) {
             <div className={styles.panel}>
                 <div className={styles.panelHeading}>
                     <div className={styles.panelTitle}>{horse.name}</div>
-                    <div>{horse.image}</div>
+                    <div>
+                        {horse.image && <span>
+                            <img src={`${horse.image}`} className={styles.heroImage} />
+                        </span>}
+                    </div>
                 </div>
                 <div className={styles.panelBody}>
                     <dl>

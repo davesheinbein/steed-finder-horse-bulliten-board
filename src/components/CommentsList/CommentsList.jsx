@@ -3,7 +3,7 @@ import Comment from '../../components/Comment/Comment'
 import AddComment from '../../components/AddComments/AddComments'
 
 function CommentsList(props) {
-    // console.log(props, '< props');
+     //console.log(props, '< props');
     return (
         <div className='CommentsList'>
             <h1>Comments</h1>

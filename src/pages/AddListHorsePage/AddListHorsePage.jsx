@@ -113,16 +113,15 @@ class ListHorse extends Component {
               />
             </div>
 
-            {/* <div className={styles.formGroup}>
+            <div className={styles.formGroup}>
             <label>Horse's Image link (required): </label>
             <input
               className={styles.formControl}
               name="image"
               value={this.state.formData.image}
               onChange={this.handleChange}
-              required
             />
-          </div> */}
+          </div>
 
             <button
               type="submit"

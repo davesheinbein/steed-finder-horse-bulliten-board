@@ -61,3 +61,15 @@
     text-align: center;
     margin: 0px 10%;
 }
+
+.heroImage{
+    width: 95%;
+    max-width: 99%;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+.heroImage:hover{
+    transform: scaleX(-1);
+}

@@ -9,9 +9,9 @@ class HorseDetailPage extends Component {
     horse = this.props.location.state.horse;
     comment = this.props.location.state.horse.comment;
     render() {
-        console.log(this.comment, '<<<<<< this.comment');
+        //console.log(this.comment, '<<<<<< this.comment');
         // console.log(horse, '<hitting horse');
-        console.log(this.horse, '<<<<<< this.horse');
+        
         return (
             <>
                 <div className={styles.detailsTitle}>Horse Details</div>

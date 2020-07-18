@@ -6,7 +6,7 @@
     width: 100%;
     background-color:#BF4342;
     padding: 5px 10px;
-    /* position: absolute; */
+    position: absolute;
     bottom: 0px;
     animation-name: content;
     animation-duration: 2s;

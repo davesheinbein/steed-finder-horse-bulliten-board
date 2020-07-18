@@ -100,9 +100,11 @@ class App extends Component {
         return horse
       }
     });
-    
-    this.setState({horses: newHorses})
+
+    this.setState({ horses: newHorses })
     this.props.history.push('/details')
+    // this.props.history.replace('/details')
+    // location.reload()
   }
 
 
@@ -131,7 +133,7 @@ class App extends Component {
 
   render() {
     console.log("we are re rendering");
-    
+
     return (
       <div className="App">
         <header className="App-header">
@@ -195,9 +197,9 @@ class App extends Component {
             />
           } />
         </Switch>
-        <footer>
+        
           <Footer />
-        </footer>
+        
       </div>
     );
   }
