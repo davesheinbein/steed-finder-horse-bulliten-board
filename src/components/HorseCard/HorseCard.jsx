@@ -29,6 +29,10 @@ function HorseCard({ horse, handleDeleteHorse }) {
                             <dd>{horse.breed}</dd>
                         </div>
                         <div className={styles.reAlign}>
+                            <dt>Categories: </dt>
+                            <dd>{horse.catergories}</dd>
+                        </div>
+                        <div className={styles.reAlign}>
                             <dt>Price: </dt>
                             <dd>${horse.price}</dd>
                         </div>

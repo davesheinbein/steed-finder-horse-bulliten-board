@@ -1,11 +1,13 @@
-.footer {
+.footer-bottom {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
+    height: 2em;
     background-color:#BF4342;
     padding: 5px 10px;
+    margin-bottom: 0px;
     position: absolute;
     bottom: 0px;
     animation-name: content;
@@ -17,6 +19,7 @@
     0%   {bottom: -50px;}
     100% {bottom: 0;}
   }
+
 
 .barnFooterImg {
     width: 2em;

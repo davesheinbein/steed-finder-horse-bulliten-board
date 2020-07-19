@@ -3,9 +3,10 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 
 import NavBar from '../../components/NavBar/NavBar';
-// import HorseCard from '../../components/HorseCard/HorseCard';
 import Barn from '../../components/BarnImg/BarnImg'
 import Footer from '../../components/Footer/Footer'
+import FooterTop from '../../components/FooterTop/FooterTop'
+import About from '../../components/About/About'
 
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -58,13 +59,14 @@ class App extends Component {
     // console.log(this.setState, 'this.setState');
   }
 
-  handleDeleteHorse = async id => {
-    //for the update history part
-         this.props.history.push({
-            pathname: '/details',
-            state: { horse: Whatever the horse object is that you got back from your server goes here instead of what im typing }
-        });
-   }
+  // add in
+  // handleDeleteHorse = async id => {
+  //   //for the update history part
+  //        this.props.history.push({
+  //           pathname: '/details',
+  //           state: { horse: Whatever the horse object is that you got back from your server goes here instead of what im typing }
+  //       });
+  //  }
 
   // handleDeleteHorse = async id => {
   //   console.log('hitting handle delete');
@@ -154,6 +156,7 @@ class App extends Component {
           <Route exact path='/' render={() =>
             <div>
               <Barn />
+              <About />
             </div>
           } />
           <Route exact path='/marketplace' render={() =>
@@ -205,9 +208,10 @@ class App extends Component {
             />
           } />
         </Switch>
-        
+        <footer>
+          <FooterTop />
           <Footer />
-        
+        </footer>
       </div>
     );
   }

@@ -7,12 +7,12 @@ class ListHorse extends Component {
     formData: {
       name: '',
       age: '',
-      //   catergories: '',
+      catergories: '',
       breed: '',
       price: '',
       location: '',
       contact: '',
-      //   image: '',
+      image: '',
     }
   };
 
@@ -59,15 +59,21 @@ class ListHorse extends Component {
               />
             </div>
 
-            {/* <div className={styles.formGroup}>
-            <label>Categories: </label>
-            <input
-              className={styles.formControl}
-              name="catergories"
-              value={this.state.formData.catergories}
-              onChange={this.handleChange}
-            />
-          </div> */}
+            <div className={styles.formGroup}>
+              <label>Categories: </label>
+              <select
+                name="catergories"
+                className={styles.formControl}
+                value={this.state.formData.catergories}
+                onChange={this.handleChange}
+              >
+                <option selected="selected" value="Appaloosa">Appaloosa</option>
+                <option value="Arabian">Arabian</option>
+                <option value="Belgian">Belgian</option>
+                <option value="Clydesdale">Clydesdale</option>
+                <option value="Connemara">Connemara</option>
+              </select>
+            </div>
 
             <div className={styles.formGroup}>
               <label>Breed (required): </label>
@@ -114,14 +120,14 @@ class ListHorse extends Component {
             </div>
 
             <div className={styles.formGroup}>
-            <label>Horse's Image link (required): </label>
-            <input
-              className={styles.formControl}
-              name="image"
-              value={this.state.formData.image}
-              onChange={this.handleChange}
-            />
-          </div>
+              <label>Horse Image (URL): </label>
+              <input
+                className={styles.formControl}
+                name="image"
+                value={this.state.formData.image}
+                onChange={this.handleChange}
+              />
+            </div>
 
             <button
               type="submit"

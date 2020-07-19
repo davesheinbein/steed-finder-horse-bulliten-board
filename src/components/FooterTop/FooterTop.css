@@ -1,0 +1,43 @@
+.footer-top-container {
+    border: 5px solid orange;
+    background-color: #7c2b2b;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+}
+
+a {
+    color: red;
+}
+
+ul li a {
+    color: orange;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border: 5px solid green;
+    padding: 0px 0px 2em;
+}
+
+.footer-top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 1em 0px 0px 1em;
+    border: 5px solid blue;
+}
+
+.footer-top-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 1em 0px 0px 1em;
+    border: 5px solid blue;
+
+}

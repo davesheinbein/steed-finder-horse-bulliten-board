@@ -1,0 +1,28 @@
+import React from 'react';
+import barn from '../BarnImg/barn.png';
+import './FooterTop.css'
+
+
+function FooterTop() {
+    // Import result is the URL of your image
+    return (
+        <>
+            <div className='footer-top-container'>
+                Hello
+                <div className='footer-top'>
+                    <div className='footer-top-left'>
+                    </div>
+                    <div className='footer-top-right'>
+                        <div>Additional Resources</div>
+                        <ul>
+                            <li>Adopt an Animal: <a href='https://www.petfinder.com/'>https://www.petfinder.com/</a></li>
+                            <li>Racing Stats: <a href='https://www.equibase.com/stats/'>https://www.equibase.com/stats/</a></li>
+                            <li>Report Animal Abuse: <a href='https://www.humanesociety.org/resources/report-animal-cruelty'>https://www.humanesociety.org/resources/report-animal-cruelty</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+export default FooterTop;
