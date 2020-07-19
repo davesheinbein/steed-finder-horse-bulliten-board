@@ -2,11 +2,19 @@
   text-align: center;
   height: auto;
   min-height: 100vh;
+  width: auto;
   position: relative;
 }
 
 footer {
   width: 100%;
+  -webkit-box-shadow: 0px 5px 20px -6px black;
+  -moz-box-shadow: 0px 5px 20px -6px black;
+  box-shadow: 0px 5px 20px -6px black;
+}
+
+header {
+  width: auto;
 }
 
 .App-logo {
@@ -21,15 +29,15 @@ footer {
 }
 
 .App-header {
-  background-color: #A78A7F;
-  min-height: auto;
-  padding: .5em 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1rem + 2vmin);
+  min-height: auto;
   color: white;
+  padding: .5em 0px;
+  background-color: #A78A7F;
   animation: navColorAnim;
   animation-duration: 2s;
   transition-timing-function: ease-in-out;
@@ -41,15 +49,10 @@ footer {
   100% {opacity: 100%;}
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-device-width: 375px) {
+  .App-header {
+    background-color: gray;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
 }

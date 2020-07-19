@@ -1,16 +1,18 @@
 .footer-top-container {
-    border: 5px solid blue;
-    background-color: #7c2b2b;
+    position: relative;
+    background-color: #A68A7F;
     height: auto;
     width: 100%;
     height: auto;
-    position: absolute;
-    bottom: 0px;
+    -webkit-box-shadow: 0px 5px 20px -6px black;
+    -moz-box-shadow: 0px 5px 20px -6px black;
+    box-shadow: 0px 5px 20px -6px black;
+    bottom: 2em;
     color: white;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    border: 5px solid green;
-    padding: 0px 0px 2em;
+    padding: 2em 0px;
+    /* border: 5px solid green; */
 }
 
 ul li a {
@@ -20,7 +22,7 @@ ul li a {
 
 ul li a:hover {
     color: red;
-    text-decoration: underline whitesmoke solid;
+    text-decoration: underline white solid;
 }
 
 .footer-title {
@@ -33,7 +35,6 @@ ul li a:hover {
     justify-content: start;
     align-items: flex-start;
     padding: 1em 0px 0px 1em;
-    /* border: 5px solid blue; */
     border-left: 1px solid #BF4342;
     text-align: start;
     animation: opacityAnim;
@@ -41,6 +42,7 @@ ul li a:hover {
     transition-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0%;
+    /* border: 5px solid blue; */
 }
 
 .footer-top-left {
@@ -50,7 +52,6 @@ ul li a:hover {
     align-items: flex-start;
     padding: 1em 0px 0px 1em;
     /* border: 5px solid blue; */
-
 }
 
 .horseImg {
@@ -77,3 +78,40 @@ ul li a:hover {
     0%   {opacity: 0%;}
     100% {opacity: 100%;}
   }
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .footer-top-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        font-size: .75rem;
+        white-space: wrap;
+        grid-template-columns: 4fr;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
+    .footer-top-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        font-size: .75rem;
+        white-space: wrap;
+        grid-template-columns: 1fr 4fr;
+    }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+    .footer-top-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.5rem;
+        white-space: wrap;
+        grid-template-columns: 1fr 3fr;
+    }
+}

@@ -8,10 +8,18 @@ function Team() {
     return (
         <>
             <div className='team-container'>
-                <div className='team-subHeading'>Team</div>
+                <div className='team-Heading'>Team</div>
                 <div className='team-Content'>
                     <div className='horseJumpImgBgd rotate'></div>
-                    <div className='team-text-content'>Our team currently consits of one admin</div>
+                    <div className='team-text-content'>
+                        Our team currently consits of one administrator.
+                        <br />
+                        Who is responsible for managing and moderating all website actions.
+                        <br />
+                        Contact: <a href="mailto: davesheinbein123@gmail.com">davesheinbein123@gmail.com</a>
+                        <br />
+                        For any <span>questions</span> or <span>website</span> support
+                        </div>
                 </div>
                 <br />
                 <br />

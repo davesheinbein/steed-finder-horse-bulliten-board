@@ -6,7 +6,7 @@ function About() {
     return (
         <>
             <div className='about-container'>
-                <div className='about-subHeading'>About</div>
+                <div className='about-Heading'>About</div>
                 <div className='text-Content'>
                     Steed Finders goal is to help facilitate the sale and conection of people with horses to potential buyer of those horse.
                     <br />
