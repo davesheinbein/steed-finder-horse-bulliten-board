@@ -57,18 +57,8 @@
     100% {opacity: 100%;}
   }
 
-.subMessage {
+.spacing {
     position: relative;
     margin: 60px -0px;
     font-size: 1rem;
-    animation: subMessageAnim;
-    animation-duration: 2s;
-    transition-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    opacity: 0%;
 }
-
-@keyframes subMessageAnim {
-    0%   {opacity: 0%;}
-    100% {opacity: 100%;}
-  }

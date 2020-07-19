@@ -1,0 +1,71 @@
+.team-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border: 2px solid green;
+    background-color: #E6D6C0;
+    height: auto;
+    width: 100%;
+    animation: teamAnim;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    left: 0px;
+}
+
+@keyframes teamAnim {
+    0%   {left: -1500px;}
+    100% {left: 0px;}
+}
+
+.team-subHeading {
+    position: relative;
+    font-size: 50px;
+    color: #BF4342;
+    text-align: center;
+    width: 100%;
+}
+
+.text-Content {
+    position: relative;
+    border: 4px solid greenyellow;
+}
+
+.horseJumpImgBgd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px auto;
+    border: 1px solid goldenrod;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: gold;
+    background-image: url('Horse-Jumping-Silhouette.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85%;
+    filter: drop-shadow(0px -20px 100% black);
+}
+
+.rotate {
+    animation: rotation 2s infinite linear;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(15deg);
+    }
+    to {
+      transform: rotate(-40deg);
+    }
+  }
+
+.team-text-content {
+    font-size: 1.10rem;
+    margin-top: 1rem;
+}

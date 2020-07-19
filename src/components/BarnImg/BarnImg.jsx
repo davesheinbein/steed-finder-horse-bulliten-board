@@ -11,7 +11,7 @@ function Barn() {
       <img src={barn} alt="Barn" className='barnImg' />
       <div className='titleText'>Steed Finder</div>
       <div className='subTitleText'>Horse Marketplace</div>
-      <div className='subMessage'>Adopt an Animal today! <br></br> Visit: <a href='https://www.petfinder.com/'>https://www.petfinder.com/</a></div>
+      <div className='spacing'></div>
     </div>
   )
 }

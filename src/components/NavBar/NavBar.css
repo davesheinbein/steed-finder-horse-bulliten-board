@@ -12,7 +12,7 @@
 }
 
 .NavBar-link {
-    color: whitesmoke;
+    color: white;
     text-decoration: none;
     padding: 0px 5px;
 }
@@ -23,7 +23,7 @@
 }
 
 .NavBar-link:active {
-    color: white;
+    color: orange;
     background-color: #BF4342;
     border-radius: 10px;
 }

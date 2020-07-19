@@ -7,6 +7,7 @@ import Barn from '../../components/BarnImg/BarnImg'
 import Footer from '../../components/Footer/Footer'
 import FooterTop from '../../components/FooterTop/FooterTop'
 import About from '../../components/About/About'
+import Team from '../../components/Team/Team'
 
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -157,6 +158,7 @@ class App extends Component {
             <div>
               <Barn />
               <About />
+              <Team />
             </div>
           } />
           <Route exact path='/marketplace' render={() =>

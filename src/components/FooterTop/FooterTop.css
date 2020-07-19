@@ -1,26 +1,30 @@
 .footer-top-container {
-    border: 5px solid orange;
+    border: 5px solid blue;
     background-color: #7c2b2b;
     height: auto;
     width: 100%;
+    height: auto;
     position: absolute;
     bottom: 0px;
     color: white;
-}
-
-a {
-    color: red;
-}
-
-ul li a {
-    color: orange;
-}
-
-.footer-top {
     display: grid;
     grid-template-columns: 1fr 3fr;
     border: 5px solid green;
     padding: 0px 0px 2em;
+}
+
+ul li a {
+    color: orange;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: red;
+    text-decoration: underline whitesmoke solid;
+}
+
+.footer-title {
+    text-decoration: underline;
 }
 
 .footer-top-right {
@@ -29,7 +33,14 @@ ul li a {
     justify-content: start;
     align-items: flex-start;
     padding: 1em 0px 0px 1em;
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
+    border-left: 1px solid #BF4342;
+    text-align: start;
+    animation: opacityAnim;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0%;
 }
 
 .footer-top-left {
@@ -38,6 +49,31 @@ ul li a {
     justify-content: start;
     align-items: flex-start;
     padding: 1em 0px 0px 1em;
-    border: 5px solid blue;
+    /* border: 5px solid blue; */
 
 }
+
+.horseImg {
+    width: 60%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: opacityAnim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0%;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.horseImg:hover {
+    transform: rotateY(180deg) rotateX(360deg);
+}
+
+@keyframes opacityAnim {
+    0%   {opacity: 0%;}
+    100% {opacity: 100%;}
+  }
