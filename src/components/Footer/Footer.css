@@ -32,7 +32,23 @@
 
 
 .barnFooterImg {
+    height: 1em;
     width: 2em;
+    background-color: white;
+    border-radius: 100%;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.barnFooterImg:active {
+    position: absolute;
+    right: 20rem;
+    transform: rotateX(360deg);
+    background-color: #C04342;
+    border-radius: 0%;
 }
 
 .footer-left {

@@ -8,13 +8,17 @@ function About() {
             <div className='about-container'>
                 <div className='about-Heading'>About</div>
                 <div className='text-Content'>
-                    Steed Finders goal is to help facilitate the sale and conection of people with horses to potential buyer of those horse.
+                    Steed Finders goal is to facilitate the conection of people with horses to potential buyer of those horse.
                     <br />
-                    List your horse today or check out our thriving marketplace.
+                    In the hopes that a mutually benificial agreement can forged.
+                    <br/>
+                    <br/>
+                    Check out our thriving marketplace!
+                    <br />
+                    List your horse today!
+                    <br />
                     <br />
                 </div>
-                <br />
-                <br />
             </div>
         </>
     )
