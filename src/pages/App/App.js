@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-
+// Components
 import NavBar from '../../components/NavBar/NavBar';
 import Barn from '../../components/BarnImg/BarnImg'
 import Footer from '../../components/Footer/Footer'
 import About from '../../components/About/About'
 import Team from '../../components/Team/Team'
 import Disclaimer from '../../components/Disclaimer/Disclaimer'
-
+// Pages
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import AddListHorsePage from '../../pages/AddListHorsePage/AddListHorsePage';
 import HorseMarketplacePage from '../../pages/HorseMarketplacePage/HorseMarketplacePage';
 import HorseDetailPage from '../../pages/HorseDetailsPage/HorseDetailsPage';
 import EditHorsePage from '../../pages/EditHorsePage/EditHorsePage';
-
+// Services
 import userService from '../../services/userServices';
 import horseServices from '../../services/horseServices';
 import commentServices from '../../services/commentServices';
+import pfApi from '../../services/pf-api';
+
 
 
 class App extends Component {
@@ -27,12 +29,25 @@ class App extends Component {
     super();
     this.state = {
       horses: [],
-      user: userService.getUser()
+      user: userService.getUser(),
+      animals: [],
+      animalType: [],
+      animalBreed: []
     };
+  }
+  
+  /*--- Accessing API Methods ---*/
+  getAnimals = (idx) => {
+    return this.state.animals[idx];
+  }
+  getAnimalsTypes = (idx) => {
+    return this.state.animalType[idx];
+  }
+  getAnimalsBreed = (idx) => {
+    return this.state.animalBreed[idx];
   }
 
   /*--- Handle Methods ---*/
-
   // Handle Horses
   handleAddHorse = async newHorseData => {
     const newHorse = await horseServices.create(newHorseData);
@@ -137,8 +152,28 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    // console.log('components mounted');
+
+    // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
+    // const animals = await pfApi.getAllAnimals();
+    // console.log('animals components mounted');
+    // const animalType = await pfApi.getAllTypes();
+    // console.log(' animalType components mounted');
+    // const animalBreed = await pfApi.getAllBreeds();
+    // console.log('animalBreed components mounted');
+    
+    
     this.getAll()
+    
+    // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
+    // this.setState({
+    //   animals: animals.results,
+    //   animalType: animalType.results,
+    //   animalBreed: animalBreed.results
+    // });
+    // console.log(animals);
+    // console.log(animalType);
+    // console.log(animalBreed);
+
     // console.log(this.state);
   }
 
