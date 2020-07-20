@@ -50,25 +50,20 @@ class EditHorsePage extends Component {
                             />
                         </div>
 
-                        {/* <div className={styles.formGroup}>
-                            <label className={styles.formLabel}>Categories: </label>
-                            <input
-                            className={styles.formController}
-                            name="catergories"
-                            value={this.state.formData.catergories}
-                            onChange={this.handleChange}
-                            />
-                        </div> */}
-
                         <div className={styles.formGroup}>
-                            <label className={styles.formLabel}>Breed (required): </label>
-                            <input
-                                className={styles.formController}
-                                name="breed"
-                                value={this.state.formData.breed}
+                            <label>Breed (required): </label>
+                            <select
+                                name="categories"
+                                className={styles.formControl}
+                                value={this.state.formData.categories}
                                 onChange={this.handleChange}
-                                required
-                            />
+                            >
+                                <option selected="selected" value="Appaloosa">Appaloosa</option>
+                                <option value="Arabian">Arabian</option>
+                                <option value="Belgian">Belgian</option>
+                                <option value="Clydesdale">Clydesdale</option>
+                                <option value="Connemara">Connemara</option>
+                            </select>
                         </div>
 
                         <div className={styles.formGroup}>
@@ -104,16 +99,16 @@ class EditHorsePage extends Component {
                             />
                         </div>
 
-                        {/* <div className={styles.formGroup}>
+                        <div className={styles.formGroup}>
                             <label className={styles.formLabel}>Horse's Image link (required): </label>
                             <input
-                            className={styles.formController}
-                            name="image"
-                            value={this.state.formData.image}
-                            onChange={this.handleChange}
-                            required
+                                className={styles.formController}
+                                name="image"
+                                value={this.state.formData.image}
+                                onChange={this.handleChange}
+                                required
                             />
-                        </div> */}
+                        </div>
 
                         <div className={styles.btnActions}>
                             <button
