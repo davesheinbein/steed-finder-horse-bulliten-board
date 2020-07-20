@@ -33,6 +33,16 @@ ul li a:hover {
     text-decoration: underline white solid;
 }
 
+.footer-title-link a {
+    color: orange;
+    text-decoration: none;
+}
+
+.footer-title-link a:hover {
+    color: red;
+    text-decoration: underline white solid;
+}
+
 .footer-title {
     text-decoration: underline;
 }

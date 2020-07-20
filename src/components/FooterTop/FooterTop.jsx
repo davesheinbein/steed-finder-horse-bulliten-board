@@ -12,6 +12,7 @@ function FooterTop() {
                     <img src={horse} alt="Horse" className='horseImg' />
                     </div>
                     <div className='footer-top-right'>
+                        <div className='footer-title-link'><a href='/'>Home</a></div>
                         <div className='footer-title'>Additional Resources</div>
                         <ul>
                             <li>Adopt an Animal: <a href='https://www.petfinder.com/'>https://www.petfinder.com/</a></li>
