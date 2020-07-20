@@ -34,11 +34,11 @@ header {
   color: white;
   padding: .5em 0px;
   background-color: #A78A7F;
-  animation: navOpacityAnim;
+  /* Adding this animation here breaks deployment */
+  /* animation: navOpacityAnim;
   animation-duration: 2s;
   transition-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  /* opacity: 100%; */
+  animation-fill-mode: forwards; */
 }
 
 /* @keyframes navOpacityAnim {

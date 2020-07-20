@@ -8,7 +8,6 @@ class ListHorse extends Component {
       name: '',
       age: '',
       categories: 'Appaloosa',
-      breed: '',
       price: '',
       location: '',
       contact: '',
@@ -46,9 +45,9 @@ class ListHorse extends Component {
                 name="name"
                 value={this.state.formData.name}
                 onChange={this.handleChange}
-                // pattern='/^[a-z ,-]+$/i'
                 placeholder='ABC'
                 required
+                // pattern='/^[a-z ,-]+$/i'
               />
             </div>
 
@@ -58,14 +57,14 @@ class ListHorse extends Component {
                 className={styles.formControl}
                 name="age"
                 value={this.state.formData.age}
-                // pattern='/^[1-9][0-9]?[0-9]?$/g'
                 placeholder='###'
                 onChange={this.handleChange}
+                // pattern='/^[1-9][0-9]?[0-9]?$/g'
               />
             </div>
 
             <div className={styles.formGroup}>
-              <label>Categories: </label>
+              <label>Breed (required): </label>
               <select
                 name="categories"
                 className={styles.formControl}
@@ -81,26 +80,15 @@ class ListHorse extends Component {
             </div>
 
             <div className={styles.formGroup}>
-              <label>Breed (required): </label>
-              <input
-                className={styles.formControl}
-                name="breed"
-                value={this.state.formData.breed}
-                onChange={this.handleChange}
-                required
-              />
-            </div>
-
-            <div className={styles.formGroup}>
               <label>$ Price (required): </label>
               <input
                 className={styles.formControl}
                 name="price"
                 value={this.state.formData.price}
                 onChange={this.handleChange}
-                // pattern='/^[0-9]+(\.[0-9]{1,2})?$/g'
                 placeholder='$$.$$'
                 required
+                // pattern='/^[0-9]+(\.[0-9]{1,2})?$/g'
               />
             </div>
 
@@ -123,9 +111,9 @@ class ListHorse extends Component {
                 name="contact"
                 value={this.state.formData.contact}
                 onChange={this.handleChange}
-                // pattern="/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g"
                 placeholder='(###)###-####'
                 required
+                // pattern="/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g"
               />
             </div>
 
@@ -135,8 +123,8 @@ class ListHorse extends Component {
                 className={styles.formControl}
                 name="image"
                 value={this.state.formData.image}
-                // pattern='/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g'
                 onChange={this.handleChange}
+                // pattern='/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g'
               />
             </div>
 
