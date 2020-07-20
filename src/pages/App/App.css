@@ -1,4 +1,4 @@
-/* .App {
+.App {
   text-align: center;
   height: auto;
   min-height: 100vh;
@@ -38,10 +38,10 @@ header {
   animation-duration: 2s;
   transition-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  opacity: 100%;
+  /* opacity: 100%; */
 }
 
-@keyframes navOpacityAnim {
+/* @keyframes navOpacityAnim {
   0%   {opacity: 0%;}
   100% {opacity: 100%;}
 } */
