@@ -67,8 +67,12 @@
 
     .mainLogoText {
         line-height: 20px;
-        font-size: .5rem;
+        font-size: .30rem;
         color: gold;
+    }
+    
+    .mainLogoTextHide {
+        display: none;
     }
 }
 

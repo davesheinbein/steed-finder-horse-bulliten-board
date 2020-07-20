@@ -11,7 +11,7 @@ const NavBar = (props) => {
         &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
         <span className='NavBar-welcome'>Welcome, {props.user.name}</span>
       </div>
-      <div className='mainLogoText'>
+      <div className='mainLogoText mainLogoTextHide'>
         <Link to='' className='NavBar-link mainLogoText'>Steed Finder</Link>
       </div>
       <div>
