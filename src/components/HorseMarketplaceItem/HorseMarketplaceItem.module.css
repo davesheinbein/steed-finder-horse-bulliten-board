@@ -41,10 +41,10 @@
 .panelTitle {
     color: #BF4342;
     text-decoration: double underline #A78A7F;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
 }
 
 .panelSubTitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
 }
