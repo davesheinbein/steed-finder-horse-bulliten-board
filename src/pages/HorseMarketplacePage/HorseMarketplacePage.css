@@ -1,6 +1,6 @@
 .HorseMarketplace {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 2fr 2fr 2fr;
 }
 
 .header {
@@ -8,4 +8,22 @@
     color: #BF4342;
     font-size: 60px;
     margin: 0 0 5rem;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .HorseMarketplace {
+        grid-template-columns: 4fr;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
+    .HorseMarketplace {
+        grid-template-columns: 2fr 2fr;
+    }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+    .HorseMarketplace {
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+    }
 }

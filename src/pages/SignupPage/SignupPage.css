@@ -3,6 +3,25 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
     margin: 4em 8em;
+    margin-bottom: 50px;
   }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .SignupPage {
+    margin: 4em 5%;
+    margin-bottom: 18em;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
+  .SignupPage {
+    margin: 4em 10%;
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+  .SignupPage {
+    margin: 4em 10%;
+  }
+}

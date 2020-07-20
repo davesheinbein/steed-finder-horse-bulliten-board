@@ -58,12 +58,17 @@
     text-align: center;
     color: #BF4342;
     text-decoration: double underline;
-    /* font-size: 30px; */
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .NavBar {
         font-size: .75rem;
+    }
+
+    .mainLogoText {
+        line-height: 20px;
+        font-size: .5rem;
+        color: gold;
     }
 }
 
@@ -71,10 +76,22 @@
     .NavBar {
         font-size: 1.5rem;
     }
+
+    .mainLogoText {
+        line-height: 40px;
+        font-size: 2rem;
+        color:orange;
+    }
 }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
     .NavBar {
         font-size: 2.5rem;
+    }
+
+    .mainLogoText {
+        line-height: 60px;
+        font-size: 3rem;
+        color: #BF4342;
     }
 }

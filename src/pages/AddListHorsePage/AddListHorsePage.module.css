@@ -25,3 +25,29 @@ input {
     font-size: 60px;
     margin: 0 0 5rem;
 }
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .container {
+        margin: 1em 5%;
+        margin-bottom: 20em;
+        padding: 1em 2em;
+        text-align: start;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
+    .container {
+        margin: 2em 10%;
+        padding: 1em 2em;
+        text-align: start;
+    }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+    .container {
+        margin: 2em 10%;
+        padding: 1em 2em;
+        text-align: start;
+    }
+}

@@ -69,14 +69,14 @@ class App extends Component {
   //       });
   //  }
 
-  // handleDeleteHorse = async id => {
-  //   console.log('hitting handle delete');
-  //   await horseServices.delete(id);
-  //   this.setState(state => ({
-  //     horses: state.horses.filter(h => h._id !== id)
-  //   }), () => this.props.history.push('/marketplace'));
-  //   // console.log(this.setState, 'this.setState');
-  // }
+  handleDeleteHorse = async id => {
+    console.log('hitting handle delete');
+    await horseServices.delete(id);
+    this.setState(state => ({
+      horses: state.horses.filter(h => h._id !== id)
+    }), () => this.props.history.push('/marketplace'));
+    // console.log(this.setState, 'this.setState');
+  }
 
   // Handle comments
   handleAddComment = async (id, newCommentData) => {
