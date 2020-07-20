@@ -35,7 +35,7 @@
     transition-timing-function: ease-in;
 }
 .panelBtn:hover {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
 }
 
 .panelTitle {
