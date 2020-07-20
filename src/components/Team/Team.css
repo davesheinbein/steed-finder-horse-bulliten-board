@@ -8,11 +8,11 @@
     -webkit-box-shadow: 0px 5px 20px -6px black;
     -moz-box-shadow: 0px 5px 20px -6px black;
     box-shadow: 0px 5px 20px -6px black;
+    position: relative;
     animation: teamAnim;
     animation-duration: 2s;
     transition-timing-function: ease-in-out;
     animation-fill-mode: forwards;
-    left: 0px;
 }
 
 @keyframes teamAnim {

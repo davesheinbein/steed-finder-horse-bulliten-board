@@ -11,7 +11,17 @@
     -webkit-box-shadow: 0px 5px 20px -6px black;
     -moz-box-shadow: 0px 5px 20px -6px black;
     box-shadow: 0px 5px 20px -6px black;
+    position: relative;
+    animation: teamsAnim;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
+
+@keyframes teamsAnim {
+    0%   {right: -1500px;}
+    100% {right: 0px;}
+  }
 
 
 .disclaimer {
@@ -22,6 +32,7 @@
 
 .disclaimer-title {
     text-decoration: underline;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
