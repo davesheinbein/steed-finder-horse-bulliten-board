@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     color: black;
-    /* border: 2px solid green; */
     background-color: #E6D6C0;
     height: auto;
     width: 100%;
@@ -15,6 +14,7 @@
     transition-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     left: 0px;
+    /* border: 2px solid green; */
 }
 
 
@@ -42,7 +42,6 @@
     align-items: center;
     text-align: center;
     margin: 0px auto;
-    border: 1px solid goldenrod;
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -51,7 +50,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 85%;
-    filter: drop-shadow(0px -20px 100% black);
+    -webkit-box-shadow: 0px 5px 20px -6px black;
+    -moz-box-shadow: 0px 5px 20px -6px black;
+    box-shadow: 0px 5px 20px -6px black;
+    border: 2px solid rgb(235, 199, 0);
 }
 
 .rotate {
@@ -62,10 +64,10 @@
 
   @keyframes rotation {
     from {
-      transform: rotate(15deg);
+        transform: rotate(15deg);
     }
     to {
-      transform: rotate(-40deg);
+        transform: rotate(-40deg);
     }
   }
 
