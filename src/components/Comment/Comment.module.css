@@ -7,12 +7,12 @@
 
 .panelBody {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .subHeading {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .lines {

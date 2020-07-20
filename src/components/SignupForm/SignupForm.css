@@ -45,7 +45,7 @@ button:hover {
 
 .form-label {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
   
 .form-group-btns {

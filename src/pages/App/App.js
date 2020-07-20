@@ -35,7 +35,7 @@ class App extends Component {
       animalBreed: []
     };
   }
-  
+
   /*--- Accessing API Methods ---*/
   getAnimals = (idx) => {
     return this.state.animals[idx];
@@ -75,14 +75,6 @@ class App extends Component {
     // console.log(this.setState, 'this.setState');
   }
 
-  // add in
-  // handleDeleteHorse = async id => {
-  //   //for the update history part
-  //        this.props.history.push({
-  //           pathname: '/details',
-  //           state: { horse: Whatever the horse object is that you got back from your server goes here instead of what im typing }
-  //       });
-  //  }
 
   handleDeleteHorse = async id => {
     console.log('hitting handle delete');
@@ -105,11 +97,9 @@ class App extends Component {
       return h
     }
     );
-    // console.log(newHorseArray, 'newHorseArray with comments');
     this.setState(
-      { horses: newHorseArray },
-      // This cb function runs after state is updated
-      () => this.props.history.push('/details')
+      { horses: newHorseArray }
+     
     );    // console.log(this.setState);
   }
 
@@ -128,7 +118,11 @@ class App extends Component {
     });
 
     this.setState({ horses: newHorses })
-    this.props.history.push('/details')
+    this.props.history.push({
+      pathname: '/details',
+      state: { horse: deleteRes }
+    });
+
     // this.props.history.replace('/details')
     // location.reload()
   }
@@ -160,10 +154,10 @@ class App extends Component {
     // console.log(' animalType components mounted');
     // const animalBreed = await pfApi.getAllBreeds();
     // console.log('animalBreed components mounted');
-    
-    
+
+
     this.getAll()
-    
+
     // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
     // this.setState({
     //   animals: animals.results,
