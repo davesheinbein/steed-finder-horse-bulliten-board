@@ -3,7 +3,7 @@
     grid-template-columns: 2fr 2fr 2fr;
     width: 100%;
     padding: 0px 1em;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .header {
