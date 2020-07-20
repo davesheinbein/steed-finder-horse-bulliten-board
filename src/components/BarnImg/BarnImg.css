@@ -46,17 +46,17 @@
     min-width: 30%;
     margin-top: 3em;
     position: relative;
-    animation: barnAnim;
+    /* animation: barnAnim;
     animation-duration: 2s;
     transition-timing-function: ease-in-out;
     animation-fill-mode: forwards;
-    opacity: 0%;
+    opacity: 0%; */
 }
 
-@keyframes barnAnim {
+/* @keyframes barnAnim {
     0%   {opacity: 0%;}
     100% {opacity: 100%;}
-  }
+  } */
 
 .spacing {
     position: relative;
