@@ -133,3 +133,19 @@ ul li a:hover {
         grid-template-columns: 1fr 3fr;
     }
 }
+
+/* @media screen and ( min-height: 400px ) {
+    .footer-top-container {
+        position: relative;
+        height: auto;
+        margin-top: 1em;
+    }
+}
+
+@media screen and ( min-height: 700px ) {
+    .footer-top-container {
+        position: relative;
+        height: auto;
+        margin-top: 8em;
+    }
+} */

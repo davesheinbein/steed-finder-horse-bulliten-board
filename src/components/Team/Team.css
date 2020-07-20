@@ -16,7 +16,6 @@
     left: 0px;
 }
 
-
 @keyframes teamAnim {
     0%   {left: -1500px;}
     100% {left: 0px;}

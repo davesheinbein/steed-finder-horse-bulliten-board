@@ -100,3 +100,24 @@
         height: 30vh;
     }
 }
+
+@media screen and ( min-height: 400px ) {
+
+    .displayBlock {
+        height: 80vh;
+    }
+}
+
+@media screen and ( min-height: 500px ) {
+
+    .displayBlock {
+        height: 60vh;
+    }
+}
+
+@media screen and ( min-height: 700px ) {
+
+    .displayBlock {
+        height: 26vh;
+    }
+}
