@@ -118,6 +118,13 @@
 @media screen and ( min-height: 700px ) {
 
     .displayBlock {
-        height: 26vh;
+        height: 20vh;
+    }
+}
+
+@media only screen  and (max-device-width: 1000px) and ( min-height: 700px ) {
+
+    .displayBlock {
+        height: 11vh;
     }
 }

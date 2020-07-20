@@ -66,13 +66,10 @@ class App extends Component {
     const newHorseArray = this.state.horses.map(h =>
       h._id === updatedHorse._id ? updatedHorse : h
     );
-    // console.log(newHorseArray, 'newHorseArray');
     this.setState(
       { horses: newHorseArray },
-      // This cb function runs after state is updated
       () => this.props.history.push('/marketplace')
     );
-    // console.log(this.setState, 'this.setState');
   }
 
 
@@ -99,8 +96,8 @@ class App extends Component {
     );
     this.setState(
       { horses: newHorseArray }
-     
-    );    // console.log(this.setState);
+
+    );
   }
 
   handleDeleteComment = async id => {
@@ -111,7 +108,6 @@ class App extends Component {
     const newHorses = horsesCopy.map((horse) => {
       if (horse._id == deleteRes._id) {
         return deleteRes
-        // horse = deleteRes
       } else {
         return horse
       }
@@ -122,9 +118,6 @@ class App extends Component {
       pathname: '/details',
       state: { horse: deleteRes }
     });
-
-    // this.props.history.replace('/details')
-    // location.reload()
   }
 
 
@@ -146,7 +139,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-
+    console.log('Hitting ComponentDidMount');
     // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
     // const animals = await pfApi.getAllAnimals();
     // console.log('animals components mounted');
@@ -159,11 +152,11 @@ class App extends Component {
     this.getAll()
 
     // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
-    // this.setState({
-    //   animals: animals.results,
-    //   animalType: animalType.results,
-    //   animalBreed: animalBreed.results
-    // });
+    this.setState({
+      //   animals: animals.results,
+      //   animalType: animalType.results,
+      //   animalBreed: animalBreed.results
+    });
     // console.log(animals);
     // console.log(animalType);
     // console.log(animalBreed);

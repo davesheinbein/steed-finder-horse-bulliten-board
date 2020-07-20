@@ -55,7 +55,7 @@ class AddComment extends Component {
 
                         <div className={styles.formGroup}>
                             <label className={styles.formLabel}>Comment: </label>
-                            <input
+                            <textarea
                                 className={styles.formControl}
                                 name="comment"
                                 value={this.state.formData.comment}

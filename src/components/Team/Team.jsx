@@ -1,5 +1,4 @@
 import React from 'react';
-import horseJump from './Horse-Jumping-Silhouette.png';
 import './Team.css'
 
 

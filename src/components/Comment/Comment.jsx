@@ -7,16 +7,13 @@ function Comment(props) {
     return (
         <div className={styles.Heading}>
             <div className={styles.panel}>
-                <div className={styles.panelHeading}>
-                    <div className={styles.panelTitle}>Comment</div>
-                </div>
                 <div className={styles.panelBody}>
                     <dl>
                         <dt className={styles.subHeading}>Name: </dt>
-                        <dd>{props.comment.creator}</dd>
+                        <dd className={styles.commentText}>{props.comment.creator}</dd>
                         <hr className={styles.lines} />
                         <dt className={styles.subHeading}>Comment: </dt>
-                        <dd>{props.comment.comment}</dd>
+                        <dd className={styles.commentText}>{props.comment.comment}</dd>
                         <hr className={styles.lines} />
                     </dl>
                 </div>

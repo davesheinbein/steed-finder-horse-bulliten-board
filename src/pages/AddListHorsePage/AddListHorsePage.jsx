@@ -45,6 +45,8 @@ class ListHorse extends Component {
                 name="name"
                 value={this.state.formData.name}
                 onChange={this.handleChange}
+                pattern='/^[a-z ,-]+$/i'
+                placeholder='ABC'
                 required
               />
             </div>
@@ -55,6 +57,8 @@ class ListHorse extends Component {
                 className={styles.formControl}
                 name="age"
                 value={this.state.formData.age}
+                pattern='/^[1-9][0-9]?[0-9]?$/g'
+                placeholder='###'
                 onChange={this.handleChange}
               />
             </div>
@@ -93,17 +97,21 @@ class ListHorse extends Component {
                 name="price"
                 value={this.state.formData.price}
                 onChange={this.handleChange}
+                pattern='/^[0-9]+(\.[0-9]{1,2})?$/g'
+                placeholder='$$.$$'
                 required
               />
             </div>
 
             <div className={styles.formGroup}>
-              <label>Location (City, State) (required): </label>
+              <label>Location (required): </label>
               <input
                 className={styles.formControl}
                 name="location"
                 value={this.state.formData.location}
                 onChange={this.handleChange}
+                pattern='^[A-Za-z]+(\s?)+[,\s](\s?)+[A-Za-z]{2,},[ ]?[A-Z]{2}\b$' //Needs to updated
+                placeholder='City, State'
                 required
               />
             </div>
@@ -115,6 +123,8 @@ class ListHorse extends Component {
                 name="contact"
                 value={this.state.formData.contact}
                 onChange={this.handleChange}
+                pattern='/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g'
+                placeholder='(###)###-####'
                 required
               />
             </div>
@@ -125,6 +135,7 @@ class ListHorse extends Component {
                 className={styles.formControl}
                 name="image"
                 value={this.state.formData.image}
+                pattern='/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g'
                 onChange={this.handleChange}
               />
             </div>

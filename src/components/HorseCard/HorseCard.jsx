@@ -10,38 +10,38 @@ function HorseCard({ horse, handleDeleteHorse }) {
                     <div className={styles.panelTitle}>{horse.name}</div>
                     <div>
                         {horse.image && <span>
-                            <img src={`${horse.image}`} className={styles.heroImage} />
+                            <img src={`${horse.image}`} alt='Not Found' className={styles.heroImage} />
                         </span>}
                     </div>
                 </div>
                 <div className={styles.panelBody}>
                     <dl>
                         <div className={styles.reAlign}>
-                            <dt>Name: </dt>
+                            <dt className={styles.contentTitles}>Name: </dt>
                             <dd>{horse.name}</dd>
                         </div>
                         <div className={styles.reAlign}>
-                            <dt>Age: </dt>
-                            <dd>{horse.age}</dd>
+                            <dt className={styles.contentTitles}>Age: </dt>
+                            <dd>{horse.age} Years Old</dd>
                         </div>
                         <div className={styles.reAlign}>
-                            <dt>Breed: </dt>
+                            <dt className={styles.contentTitles}>Breed: </dt>
                             <dd>{horse.breed}</dd>
                         </div>
                         <div className={styles.reAlign}>
-                            <dt>Categories: </dt>
+                            <dt className={styles.contentTitles}>Categories: </dt>
                             <dd>{horse.catergories}</dd>
                         </div>
                         <div className={styles.reAlign}>
-                            <dt>Price: </dt>
-                            <dd>${horse.price}</dd>
+                            <dt className={styles.contentTitles}>Price: </dt>
+                            <dd>$ {horse.price}</dd>
                         </div>
                         <div className={styles.reAlign}>
-                            <dt>Location: </dt>
+                            <dt className={styles.contentTitles}>Location: </dt>
                             <dd>{horse.location}</dd>
                         </div>
                         <div className={styles.reAlign}>
-                            <dt>Contact #: </dt>
+                            <dt className={styles.contentTitles}>Contact #: </dt>
                             <dd>{horse.location}</dd>
                         </div>
                     </dl>

@@ -1,7 +1,8 @@
 .Heading {
-    border: 2px solid black;
     margin: 0px 10em;
-    border: 2px solid red;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
     padding: 1em 1em;
 }
 
@@ -13,12 +14,15 @@
 .subHeading {
     display: flex;
     justify-content: flex-start;
+    color: #333333;
+    font-size: 1.5rem;
 }
 
 .lines {
-    border: 1px solid black;
+    border: 1px solid #8C1C13;
     width: 68vw;
     margin: 0px auto;
+    margin-bottom: 1.5em;
 }
 
 .actionBtn {
@@ -28,4 +32,13 @@
     display: flex;
     justify-content: space-evenly;
     margin: 0px auto;
+}
+
+.commentText {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+    margin-left: 0px;
+    color: black;
 }

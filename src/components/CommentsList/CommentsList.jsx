@@ -1,12 +1,13 @@
 import React from 'react';
 import Comment from '../../components/Comment/Comment'
 import AddComment from '../../components/AddComments/AddComments'
+import styles from './CommentsList.module.css'
 
 function CommentsList(props) {
      //console.log(props, '< props');
     return (
-        <div className='CommentsList'>
-            <h1>Comments</h1>
+        <div className={styles.CommentsList}>
+            <div className={styles.CommentsHeading}>Comments</div>
             <AddComment
                 horse={props.horse}
                 handleAddComment={props.handleAddComment}
