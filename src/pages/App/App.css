@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
   height: auto;
   min-height: 100vh;
@@ -41,7 +41,7 @@ header {
   opacity: 100%;
 }
 
-/* @keyframes navOpacityAnim {
+@keyframes navOpacityAnim {
   0%   {opacity: 0%;}
   100% {opacity: 100%;}
 } */
