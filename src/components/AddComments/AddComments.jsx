@@ -27,7 +27,7 @@ class AddComment extends Component {
             }
         })
     };
-    
+
 
 
     handleChange = e => {
@@ -41,7 +41,7 @@ class AddComment extends Component {
     render() {
         return (
             <>
-                <div className={styles.formContainer}>
+                <div className={styles.formContainerAddHorse}>
                     <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
                         <div className={styles.formGroup}>
                             <label className={styles.formLabel}>User: </label>

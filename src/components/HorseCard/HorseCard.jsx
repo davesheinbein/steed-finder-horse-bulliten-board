@@ -33,12 +33,12 @@ function HorseCard({ horse, handleDeleteHorse }) {
                             <dd>$ {horse.price}</dd>
                         </div>
                         <div className={styles.reAlign}>
-                            <dt className={styles.contentTitles}>Location: </dt>
+                            <dt className={styles.contentTitles}>Location:</dt>
                             <dd>{horse.location}</dd>
                         </div>
                         <div className={styles.reAlign}>
-                            <dt className={styles.contentTitles}>Contact #: </dt>
-                            <dd>{horse.location}</dd>
+                            <dt className={styles.contentTitles}>Contact #:</dt>
+                            <dd>{horse.contact}</dd>
                         </div>
                     </dl>
                 </div>

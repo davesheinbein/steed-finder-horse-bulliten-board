@@ -1,10 +1,14 @@
 .horseCard {
+    background-color: white;
     border: 2px solid black;
-    margin: 10px 10rem;
+    margin: 10px 10%;
+    -webkit-box-shadow: 0px 5px 20px -6px black;
+    -moz-box-shadow: 0px 5px 20px -6px black;
+    box-shadow: 0px 5px 20px -6px black;
 }
 
 .panel {
-    border: 5px solid black;
+    /* border: 2px solid black; */
 }
 
 .panelTitle {
@@ -71,9 +75,12 @@
 .heroImage{
     width: 95%;
     max-width: 99%;
-    border: 2px solid black;
     border-radius: 4px;
     margin-bottom: 1em;
+    -webkit-box-shadow: 0px 5px 10px -6px black;
+    -moz-box-shadow: 0px 5px 10px -6px black;
+    box-shadow: 0px 5px 10px -6px black;
+    /* border: 2px solid black; */
 }
 
 .heroImage:hover{
