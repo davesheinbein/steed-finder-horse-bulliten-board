@@ -38,6 +38,7 @@ header {
   animation-duration: 2s;
   transition-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  opacity: 100%;
 }
 
 @keyframes navOpacityAnim {

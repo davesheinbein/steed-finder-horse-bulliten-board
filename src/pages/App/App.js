@@ -19,7 +19,7 @@ import EditHorsePage from '../../pages/EditHorsePage/EditHorsePage';
 import userService from '../../services/userServices';
 import horseServices from '../../services/horseServices';
 import commentServices from '../../services/commentServices';
-import pfApi from '../../services/pf-api';
+import prApi from '../../services/pr-api';
 
 
 
@@ -30,8 +30,6 @@ class App extends Component {
     this.state = {
       horses: [],
       user: userService.getUser(),
-      animals: [],
-      animalType: [],
       animalBreed: []
     };
   }
@@ -141,11 +139,7 @@ class App extends Component {
   componentDidMount = () => {
     console.log('Hitting ComponentDidMount');
     // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
-    // const animals = await pfApi.getAllAnimals();
-    // console.log('animals components mounted');
-    // const animalType = await pfApi.getAllTypes();
-    // console.log(' animalType components mounted');
-    // const animalBreed = await pfApi.getAllBreeds();
+    // const animalBreed = await prApi.getAllBreeds();
     // console.log('animalBreed components mounted');
 
 
@@ -153,12 +147,8 @@ class App extends Component {
 
     // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
     this.setState({
-      //   animals: animals.results,
-      //   animalType: animalType.results,
       //   animalBreed: animalBreed.results
     });
-    // console.log(animals);
-    // console.log(animalType);
     // console.log(animalBreed);
 
     // console.log(this.state);
