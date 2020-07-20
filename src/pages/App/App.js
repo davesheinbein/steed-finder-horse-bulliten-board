@@ -5,7 +5,6 @@ import { Route, Switch } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import Barn from '../../components/BarnImg/BarnImg'
 import Footer from '../../components/Footer/Footer'
-import FooterTop from '../../components/FooterTop/FooterTop'
 import About from '../../components/About/About'
 import Team from '../../components/Team/Team'
 import Disclaimer from '../../components/Disclaimer/Disclaimer'
@@ -213,7 +212,6 @@ class App extends Component {
           } />
         </Switch>
         <footer>
-          <FooterTop />
           <Footer />
         </footer>
       </div>

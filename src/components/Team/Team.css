@@ -17,6 +17,7 @@
     left: 0px;
 }
 
+
 @keyframes teamAnim {
     0%   {left: -1500px;}
     100% {left: 0px;}
@@ -124,7 +125,7 @@ span {
     .team-text-content {
         font-size: 1.75rem;
         margin: 1rem 10%;
-        border: 2px solid pink;
+        /* border: 2px solid blue; */
     }
 
     .team-Heading {

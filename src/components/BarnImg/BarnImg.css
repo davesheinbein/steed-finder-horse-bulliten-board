@@ -43,7 +43,7 @@
   }
 
 .barnImg {
-    width: 80%;
+    min-width: 30%;
     margin-top: 3em;
     position: relative;
     animation: barnAnim;
