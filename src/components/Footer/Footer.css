@@ -1,7 +1,7 @@
 .displayBlock {
     display: block;
     width: 100%;
-    height: 40vh;
+    height: auto;
 }
 
 .footer-container {
