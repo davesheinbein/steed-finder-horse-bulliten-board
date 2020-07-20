@@ -29,7 +29,7 @@ select {
 .btn {
     transition-property: all;
     transition-duration: 1s;
-    transition-timing-function: ease-in;
+    transition-timing-function: ease-in; 
 }
 
 .btn:hover {
