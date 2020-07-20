@@ -16,13 +16,21 @@
 .panelDetailsBtn, .panelEditBtn {
     color: #BF4342;
     padding: 0px 5px;
+    position: relative;
     text-decoration: none;
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease-in;
 }
 
-.panelDetailsBtn:hover, .panelEditBtn:hover {
+.panelDetailsBtn:hover {
+    color: white;
+    background-color: #333;
+    border-radius: 5px;
+    transform: rotateY(180deg);
+}
+
+.panelEditBtn:hover {
     color: white;
     background-color: #BF4342;
     border-radius: 5px;
