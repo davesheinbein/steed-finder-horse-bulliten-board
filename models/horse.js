@@ -18,7 +18,7 @@ const commentsSchema = new Schema(
 var horseSchema = new Schema({
   name: { type: String, required: true },
   age: { type: Number, required: true },
-  //  catergories: {type: String},
+  categories: { type: String },
   breed: { type: String },
   price: { type: Number, required: true },
   location: { type: String },

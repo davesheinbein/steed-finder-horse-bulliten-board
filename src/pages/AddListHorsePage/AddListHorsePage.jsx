@@ -7,7 +7,7 @@ class ListHorse extends Component {
     formData: {
       name: '',
       age: '',
-      catergories: '',
+      categories: 'Appaloosa',
       breed: '',
       price: '',
       location: '',
@@ -29,6 +29,7 @@ class ListHorse extends Component {
       formData,
       invalidForm: !this.formRef.current.checkValidity()
     });
+    console.log(this.state.formData, 'this.state.formData');
   };
 
   render() {
@@ -45,7 +46,7 @@ class ListHorse extends Component {
                 name="name"
                 value={this.state.formData.name}
                 onChange={this.handleChange}
-                pattern='/^[a-z ,-]+$/i'
+                // pattern='/^[a-z ,-]+$/i'
                 placeholder='ABC'
                 required
               />
@@ -66,9 +67,9 @@ class ListHorse extends Component {
             <div className={styles.formGroup}>
               <label>Categories: </label>
               <select
-                name="catergories"
+                name="categories"
                 className={styles.formControl}
-                value={this.state.formData.catergories}
+                value={this.state.formData.categories}
                 onChange={this.handleChange}
               >
                 <option selected="selected" value="Appaloosa">Appaloosa</option>
@@ -122,7 +123,7 @@ class ListHorse extends Component {
                 name="contact"
                 value={this.state.formData.contact}
                 onChange={this.handleChange}
-                pattern="/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g"
+                // pattern="/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g"
                 placeholder='(###)###-####'
                 required
               />

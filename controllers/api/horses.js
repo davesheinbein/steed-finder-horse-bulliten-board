@@ -22,6 +22,7 @@ function index(req, res) {
 //  }
 
 function create(req, res) {
+   console.log(req.body, 'req.body');
    req.body.user = req.user._id
    Horse.create(req.body, function (err, horse) {
       console.log(err, 'err');
