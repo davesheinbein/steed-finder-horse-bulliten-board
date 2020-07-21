@@ -75,11 +75,6 @@ class ListHorse extends Component {
                 {
                   horses.map(horse => <option value={horse}>{horse}</option>)
                 }
-                {/* <option selected="selected" value="Appaloosa">Appaloosa</option>
-                <option value="Arabian">Arabian</option>
-                <option value="Belgian">Belgian</option>
-                <option value="Clydesdale">Clydesdale</option>
-                <option value="Connemara">Connemara</option> */}
               </select>
             </div>
 
@@ -137,7 +132,7 @@ class ListHorse extends Component {
               className={styles.btn}
               disabled={this.state.invalidForm}
             >
-              Add+ Horse
+              Add Horse
           </button>
           </form>
         </div>

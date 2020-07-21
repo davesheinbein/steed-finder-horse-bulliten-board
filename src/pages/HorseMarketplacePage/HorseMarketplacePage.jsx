@@ -12,6 +12,7 @@ function HorseMarketplace(props) {
                         handleDeleteHorse={props.handleDeleteHorse}
                         horse={horse}
                         key={horse._id}
+                        user={props.user}
                     />
                 )}
             </div>

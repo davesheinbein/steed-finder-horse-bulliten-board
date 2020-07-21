@@ -141,7 +141,7 @@ class App extends Component {
 
     // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
     // this.setState({
-      //   animalBreed: animalBreed.results
+    //   animalBreed: animalBreed.results
     // });
     // console.log(animalBreed);
 
@@ -171,6 +171,7 @@ class App extends Component {
           <Route exact path='/marketplace' render={() =>
             <div>
               <HorseMarketplacePage
+                user={this.state.user}
                 horses={this.state.horses}
                 handleDeleteHorse={this.handleDeleteHorse}
               />
@@ -188,6 +189,7 @@ class App extends Component {
             <div>
               <HorseDetailPage
                 horses={this.state.horses}
+                user={this.state.user}
                 location={location}
                 handleUpdateHorse={this.handleUpdateHorse}
                 handleDeleteHorse={this.handleDeleteHorse}
