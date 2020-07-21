@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   handleUpdateHorse = async updatedHorseData => {
-    console.log('hitting update horse');
+    // console.log('hitting update horse');
     const updatedHorse = await horseServices.update(updatedHorseData);
     const newHorseArray = this.state.horses.map(h =>
       h._id === updatedHorse._id ? updatedHorse : h
@@ -66,7 +66,7 @@ class App extends Component {
 
 
   handleDeleteHorse = async id => {
-    console.log('hitting handle delete');
+    // console.log('hitting handle delete');
     await horseServices.delete(id);
     this.setState(state => ({
       horses: state.horses.filter(h => h._id !== id)
@@ -96,7 +96,7 @@ class App extends Component {
     // console.log('hitting handle delete');
     const deleteRes = await commentServices.delete(id);
     const horsesCopy = this.state.horses
-    console.log(deleteRes, '<<<< deleteRes');
+    // console.log(deleteRes, '<<<< deleteRes');
     const newHorses = horsesCopy.map((horse) => {
       if (horse._id == deleteRes._id) {
         return deleteRes
@@ -126,7 +126,7 @@ class App extends Component {
 
   getAll = async () => {
     const horses = await horseServices.index();
-    console.log(horses, '< hitting!');
+    // console.log(horses, '< hitting!');
     this.setState({ horses });
   }
 
@@ -149,7 +149,7 @@ class App extends Component {
   }
 
   render() {
-    console.log("we are re rendering");
+    // console.log("we are re rendering");
 
     return (
       <div className="App">
