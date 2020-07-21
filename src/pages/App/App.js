@@ -35,15 +35,9 @@ class App extends Component {
   }
 
   /*--- Accessing API Methods ---*/
-  getAnimals = (idx) => {
-    return this.state.animals[idx];
-  }
-  getAnimalsTypes = (idx) => {
-    return this.state.animalType[idx];
-  }
-  getAnimalsBreed = (idx) => {
-    return this.state.animalBreed[idx];
-  }
+  // getAnimalsBreed = (idx) => {
+  //   return this.state.animalBreed[idx];
+  // }
 
   /*--- Handle Methods ---*/
   // Handle Horses
