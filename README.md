@@ -9,9 +9,9 @@ You are able to list a horse and leave comments on horses when logged into the w
 ## Screenshot:
 
 ### Home Page Sceenshot
-<!-- ![Home Page Sceenshot](screenshots/homepage-screenshot.png?) -->
+![Home Page Sceenshot](screenshots/homepageScreenshot.png)
 
-<!-- [Home Page Sceenshot](https://imgur.com/YCEiEr5) -->
+[Home Page Sceenshot](https://imgur.com/nbhFggL)
 
 
 
