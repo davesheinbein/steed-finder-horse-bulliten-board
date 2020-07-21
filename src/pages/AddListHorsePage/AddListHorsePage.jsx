@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './AddListHorsePage.module.css'
+import horses from '../../Constants/horses'
 
 class ListHorse extends Component {
   state = {
@@ -47,7 +48,7 @@ class ListHorse extends Component {
                 onChange={this.handleChange}
                 placeholder='ABC'
                 required
-                // pattern='/^[a-z ,-]+$/i'
+              // pattern='/^[a-z ,-]+$/i'
               />
             </div>
 
@@ -59,7 +60,7 @@ class ListHorse extends Component {
                 value={this.state.formData.age}
                 placeholder='###'
                 onChange={this.handleChange}
-                // pattern='/^[1-9][0-9]?[0-9]?$/g'
+              // pattern='/^[1-9][0-9]?[0-9]?$/g'
               />
             </div>
 
@@ -71,11 +72,14 @@ class ListHorse extends Component {
                 value={this.state.formData.categories}
                 onChange={this.handleChange}
               >
-                <option selected="selected" value="Appaloosa">Appaloosa</option>
+                {
+                  horses.map(horse => <option value={horse}>{horse}</option>)
+                }
+                {/* <option selected="selected" value="Appaloosa">Appaloosa</option>
                 <option value="Arabian">Arabian</option>
                 <option value="Belgian">Belgian</option>
                 <option value="Clydesdale">Clydesdale</option>
-                <option value="Connemara">Connemara</option>
+                <option value="Connemara">Connemara</option> */}
               </select>
             </div>
 
@@ -88,7 +92,7 @@ class ListHorse extends Component {
                 onChange={this.handleChange}
                 placeholder='$$.$$'
                 required
-                // pattern='/^[0-9]+(\.[0-9]{1,2})?$/g'
+              // pattern='/^[0-9]+(\.[0-9]{1,2})?$/g'
               />
             </div>
 
@@ -113,7 +117,7 @@ class ListHorse extends Component {
                 onChange={this.handleChange}
                 placeholder='(###)###-####'
                 required
-                // pattern="/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g"
+              // pattern="/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g"
               />
             </div>
 
@@ -124,7 +128,7 @@ class ListHorse extends Component {
                 name="image"
                 value={this.state.formData.image}
                 onChange={this.handleChange}
-                // pattern='/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g'
+              // pattern='/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g'
               />
             </div>
 

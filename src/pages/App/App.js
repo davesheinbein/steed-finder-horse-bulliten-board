@@ -19,7 +19,7 @@ import EditHorsePage from '../../pages/EditHorsePage/EditHorsePage';
 import userService from '../../services/userServices';
 import horseServices from '../../services/horseServices';
 import commentServices from '../../services/commentServices';
-import prApi from '../../services/pr-api';
+// import prApi from '../../services/pr-api';
 
 
 
@@ -30,7 +30,7 @@ class App extends Component {
     this.state = {
       horses: [],
       user: userService.getUser(),
-      animalBreed: []
+      // animalBreed: []
     };
   }
 
@@ -137,7 +137,7 @@ class App extends Component {
   }
 
   componentDidMount = () => {
-    console.log('Hitting ComponentDidMount');
+    // console.log('Hitting ComponentDidMount');
     // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
     // const animalBreed = await prApi.getAllBreeds();
     // console.log('animalBreed components mounted');
@@ -146,9 +146,9 @@ class App extends Component {
     this.getAll()
 
     // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
-    this.setState({
+    // this.setState({
       //   animalBreed: animalBreed.results
-    });
+    // });
     // console.log(animalBreed);
 
     // console.log(this.state);
