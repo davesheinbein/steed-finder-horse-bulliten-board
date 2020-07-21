@@ -59,5 +59,6 @@ You are able to list a horse and leave comments on horses when logged into the w
 ## Potential Next Steps: 
 
 ##### - [x] Add some animation
-##### - [] Add API
+##### - [] Swap in materialize or bootstrap for the majority of the css
 ##### - [] Update Css further for media queries
+##### - [] Add relevant API

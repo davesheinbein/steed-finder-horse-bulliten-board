@@ -30,7 +30,7 @@ class App extends Component {
     this.state = {
       horses: [],
       user: userService.getUser(),
-      // animalBreed: []
+      // animalBreed: [] // for potential Api
     };
   }
 
