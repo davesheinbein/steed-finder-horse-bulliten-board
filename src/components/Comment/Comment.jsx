@@ -18,12 +18,15 @@ function Comment(props) {
                     </dl>
                 </div>
                 <div className={styles.actionBtn}>
-                    <button
-                        className={styles.panelDeleteBtn}
-                        onClick={() => props.handleDeleteComment(props.comment._id)}
-                    >
-                        DELETE
-                </button>
+                    {
+                        props.comment.creator === props.user.name ?
+                            <button
+                                className={styles.panelDeleteBtn}
+                                onClick={() => props.handleDeleteComment(props.comment._id)}
+                            >
+                                DELETE
+                            </button> : null
+                    }
                 </div>
             </div>
         </div>

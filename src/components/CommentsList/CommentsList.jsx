@@ -17,6 +17,7 @@ function CommentsList(props) {
             {
                 props.horse.comments.map(comment => {
                     return <Comment
+                        user={props.user}
                         comment={comment}
                         handleDeleteComment={props.handleDeleteComment}
                         key={comment._id}
