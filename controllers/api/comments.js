@@ -9,7 +9,9 @@ function createHorseComment(req, res) {
     // console.log('hittin createHorseComment!!!!!!!');
     // req.body.createdby = req.user._id;
     // console.log(req.body); // { creator: '', comment: '' }
+    console.log(req.user, '<<<<< req.user');
     Horse.findById(req.params.horseid, function (err, horse) {
+        req.body.creator = req.user.name
         horse.comments.push(req.body);
         horse.save(function (err, h) {
             // res.redirect(`/details`);

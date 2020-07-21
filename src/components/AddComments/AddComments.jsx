@@ -10,7 +10,6 @@ class AddComment extends Component {
     state = {
         invalidForm: true,
         formData: {
-            creator: '',
             comment: ''
         }
     };
@@ -45,12 +44,7 @@ class AddComment extends Component {
                     <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
                         <div className={styles.formGroup}>
                             <label className={styles.formLabel}>User: </label>
-                            <input
-                                className={styles.formControl}
-                                name="creator"
-                                value={this.state.formData.creator}
-                                onChange={this.handleChange}
-                            />
+                            <div className={styles.username}>{this.props.user.name}</div>
                         </div>
 
                         <div className={styles.formGroup}>

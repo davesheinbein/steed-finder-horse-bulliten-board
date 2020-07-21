@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './HorseCard.module.css'
 
-function HorseCard({ horse, handleDeleteHorse }) {
+function HorseCard({ horse, handleDeleteHorse, user }) {
     return (
         <div className={styles.horseCard}>
             <div className={styles.panel}>
@@ -43,27 +43,35 @@ function HorseCard({ horse, handleDeleteHorse }) {
                     </dl>
                 </div>
                 <div className={styles.panelFooter}>
-                    <Link
-                        className={styles.panelEditBtn}
-                        to={{
-                            pathname: '/edit',
-                            state: { horse }
-                        }}
-                    >
-                        EDIT
-                    </Link>
+                    {
+                        horse.user === user._id ?
+                            <Link
+                                className={styles.panelEditBtn}
+                                to={{
+                                    pathname: '/edit',
+                                    state: { horse }
+                                }}
+                            >
+                                EDIT
+                            </Link> : null
+                    }
+
                     <Link
                         to='/marketplace'
                         className={styles.panelReturnBtn}
                     >
                         RETURN TO LIST
                     </Link>
-                    <button
-                        className={styles.panelDeleteBtn}
-                        onClick={() => handleDeleteHorse(horse._id)} //breaks code need to figure out how to make sure props is being passed.
-                    >
-                        DELETE
-                    </button>
+
+                    {
+                        horse.user === user._id ?
+                            <button
+                                className={styles.panelDeleteBtn}
+                                onClick={() => handleDeleteHorse(horse._id)} //breaks code need to figure out how to make sure props is being passed.
+                            >
+                                DELETE
+                            </button> : null
+                    }
                 </div>
             </div>
         </div>

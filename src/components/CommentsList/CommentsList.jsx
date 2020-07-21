@@ -4,11 +4,12 @@ import AddComment from '../../components/AddComments/AddComments'
 import styles from './CommentsList.module.css'
 
 function CommentsList(props) {
-     //console.log(props, '< props');
+    //console.log(props, '< props');
     return (
         <div className={styles.CommentsList}>
             <div className={styles.CommentsHeading}>Comments</div>
             <AddComment
+                user={props.user}
                 horse={props.horse}
                 handleAddComment={props.handleAddComment}
                 key={props.horse._id}

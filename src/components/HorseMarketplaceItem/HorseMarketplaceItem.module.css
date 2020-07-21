@@ -27,14 +27,18 @@
     color: white;
     background-color: #333;
     border-radius: 5px;
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
 }
 
 .panelEditBtn:hover {
     color: white;
     background-color: #BF4342;
     border-radius: 5px;
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
+}
+
+.panelDeleteBtn {
+    transform: rotateY(360deg);
 }
 
 .panelBtn {
@@ -43,7 +47,7 @@
     transition-timing-function: ease-in;
 }
 .panelBtn:hover {
-    transform: rotateY(-180deg);
+    transform: rotateY(360deg);
 }
 
 .panelTitle {
