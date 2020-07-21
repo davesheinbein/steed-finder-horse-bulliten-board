@@ -9,7 +9,7 @@ You are able to list a horse and leave comments on horses when logged into the w
 ## Screenshot:
 
 ### Home Page Sceenshot
-![Home Page Sceenshot](screenshots/homepageScreenshot.png)
+![Home Page Sceenshot](./screenshots/homepageScreenshot.png)
 
 [Home Page Sceenshot](https://imgur.com/nbhFggL)
 
@@ -38,7 +38,6 @@ You are able to list a horse and leave comments on horses when logged into the w
 [Trello Board](https://trello.com/b/QQgGKAnE/ga-project-4)
 
 ### Click the link to view the ERD
-![ERD](./)
 [ERD](https://app.lucidchart.com/invitations/accept/754f604d-817c-4b95-9d01-6a7b38a1ef31)
 
 ## Potential Next Steps: 
