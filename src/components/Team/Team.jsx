@@ -11,9 +11,9 @@ function Team() {
                 <div className='team-Content'>
                     <div className='horseJumpImgBgd rotate'></div>
                     <div className='team-text-content'>
-                        Our team currently consits of one administrator.
+                        Our team currently consists of one administrator.
                         <br />
-                        Who is responsible for managing and moderating all website actions.
+                        He is responsible for managing and moderating all website actions.
                         <br />
                         Contact: <a href="mailto: davesheinbein123@gmail.com">davesheinbein123@gmail.com</a>
                         <br />
