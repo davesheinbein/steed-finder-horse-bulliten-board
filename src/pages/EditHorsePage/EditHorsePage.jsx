@@ -37,7 +37,6 @@ class EditHorsePage extends Component {
                                 name="name"
                                 value={this.state.formData.name}
                                 onChange={this.handleChange}
-                                type='number'
                                 required
                             />
                         </div>
@@ -49,6 +48,7 @@ class EditHorsePage extends Component {
                                 name="age"
                                 value={this.state.formData.age}
                                 onChange={this.handleChange}
+                                type='number'
                             />
                         </div>
 
