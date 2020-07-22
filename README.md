@@ -39,12 +39,11 @@ You are able to list a horse and leave comments on horses when logged into the w
 #### 4. Mongoose
 #### 5. MongoDB
 #### 6. MongoDB Atlas
-#### 7. Mongoose
-#### 8. Node.js
-#### 9. Express
-#### 10. React
-#### 11. Postman
-#### 12. Heroku
+#### 7. Node.js
+#### 8. Express
+#### 9. React
+#### 10. Postman
+#### 11. Heroku
 
 
 ### Click the link to view the website
