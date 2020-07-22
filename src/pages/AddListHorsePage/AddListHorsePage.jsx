@@ -23,6 +23,14 @@ class ListHorse extends Component {
     this.props.handleAddHorse(this.state.formData);
   };
 
+  // handlePattern() = e => {
+  //   if (invalidForm = false) {
+
+  //   } else {
+  //     alert('Form Data is invalid.' < br ></br > 'Please try again.')
+  //   }
+  // }
+
   handleChange = e => {
     const formData = { ...this.state.formData, [e.target.name]: e.target.value };
     this.setState({
@@ -32,14 +40,14 @@ class ListHorse extends Component {
     console.log(this.state.formData, 'this.state.formData');
   };
 
+
   render() {
     return (
       <>
         <div className={styles.headerFooter}>Add Horse</div>
         <div className={styles.container}>
           <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-
-            <div className={styles.formGroup}>
+            < div className={styles.formGroup}>
               <label>Name (required): </label>
               <input
                 className={styles.formControl}
@@ -48,7 +56,7 @@ class ListHorse extends Component {
                 onChange={this.handleChange}
                 placeholder='ABC'
                 required
-              // pattern='/^[a-z ,-]+$/i'
+                pattern="{/^[a-z ,-]+$/i}"
               />
             </div>
 
@@ -60,7 +68,8 @@ class ListHorse extends Component {
                 value={this.state.formData.age}
                 placeholder='###'
                 onChange={this.handleChange}
-              // pattern='/^[1-9][0-9]?[0-9]?$/g'
+                type='number'
+              // pattern="{/^[1-9][0-9]?[0-9]?$/g}"
               />
             </div>
 
@@ -87,7 +96,8 @@ class ListHorse extends Component {
                 onChange={this.handleChange}
                 placeholder='$$.$$'
                 required
-              // pattern='/^[0-9]+(\.[0-9]{1,2})?$/g'
+                type='number'
+                pattern="{/^[0-9]+(\.[0-9]{1,2})?$/g}"
               />
             </div>
 
@@ -100,11 +110,12 @@ class ListHorse extends Component {
                 onChange={this.handleChange}
                 placeholder='City, State'
                 required
+                pattern="{^[A-Za-z . ,'-]+$}"
               />
             </div>
 
             <div className={styles.formGroup}>
-              <label>Contact Number # (required): </label>
+              <label>Contact Number (required): </label>
               <input
                 className={styles.formControl}
                 name="contact"
@@ -112,7 +123,8 @@ class ListHorse extends Component {
                 onChange={this.handleChange}
                 placeholder='(###)###-####'
                 required
-              // pattern="/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g"
+                type='tel'
+                pattern="{/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g}"
               />
             </div>
 
@@ -123,7 +135,7 @@ class ListHorse extends Component {
                 name="image"
                 value={this.state.formData.image}
                 onChange={this.handleChange}
-              // pattern='/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g'
+                pattern="{/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g}"
               />
             </div>
 
@@ -131,9 +143,10 @@ class ListHorse extends Component {
               type="submit"
               className={styles.btn}
               disabled={this.state.invalidForm}
+            // onClick={this.handlePattern}
             >
               Add Horse
-          </button>
+              </button>
           </form>
         </div>
       </>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './EditHorsePage.module.css'
+import horses from '../../Constants/horses'
 
 class EditHorsePage extends Component {
     state = {
@@ -36,6 +37,7 @@ class EditHorsePage extends Component {
                                 name="name"
                                 value={this.state.formData.name}
                                 onChange={this.handleChange}
+                                type='number'
                                 required
                             />
                         </div>
@@ -58,11 +60,9 @@ class EditHorsePage extends Component {
                                 value={this.state.formData.categories}
                                 onChange={this.handleChange}
                             >
-                                <option selected="selected" value="Appaloosa">Appaloosa</option>
-                                <option value="Arabian">Arabian</option>
-                                <option value="Belgian">Belgian</option>
-                                <option value="Clydesdale">Clydesdale</option>
-                                <option value="Connemara">Connemara</option>
+                                {
+                                    horses.map(horse => <option value={horse}>{horse}</option>)
+                                }
                             </select>
                         </div>
 
@@ -73,6 +73,7 @@ class EditHorsePage extends Component {
                                 name="price"
                                 value={this.state.formData.price}
                                 onChange={this.handleChange}
+                                type='number'
                                 required
                             />
                         </div>
@@ -95,6 +96,7 @@ class EditHorsePage extends Component {
                                 name="contact"
                                 value={this.state.formData.contact}
                                 onChange={this.handleChange}
+                                type='tel'
                                 required
                             />
                         </div>

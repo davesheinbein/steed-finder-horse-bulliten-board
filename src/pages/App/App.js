@@ -201,6 +201,7 @@ class App extends Component {
           <Route exact path='/edit' render={({ location }) =>
             <div>
               <EditHorsePage
+                horses={this.state.horses}
                 handleUpdateHorse={this.handleUpdateHorse}
                 location={location}
               />
