@@ -30,11 +30,13 @@ class App extends Component {
     this.state = {
       horses: [],
       user: userService.getUser(),
+      // Might add api - Left off here <-------------------------------------------<<<<<<<<<<<<<<<
       // animalBreed: [] // for potential Api
     };
   }
 
   /*--- Accessing API Methods ---*/
+  // Might add api - Left off here <-------------------------------------------<<<<<<<<<<<<<<<
   // getAnimalsBreed = (idx) => {
   //   return this.state.animalBreed[idx];
   // }
@@ -132,14 +134,15 @@ class App extends Component {
 
   componentDidMount = () => {
     // console.log('Hitting ComponentDidMount');
-    // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
+
+    // Might add api - Left off here <-------------------------------------------<<<<<<<<<<<<<<<
     // const animalBreed = await prApi.getAllBreeds();
     // console.log('animalBreed components mounted');
 
 
     this.getAll()
 
-    // Left off here <-------------------------------------------<<<<<<<<<<<<<<<
+    // Might add api - Left off here <-------------------------------------------<<<<<<<<<<<<<<<
     // this.setState({
     //   animalBreed: animalBreed.results
     // });
