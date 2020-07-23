@@ -33,7 +33,7 @@ You are able to list a horse and leave comments on horses when logged into the w
 
 ## Technologies Used: 
 
-#### 1. HTML
+#### 1. HTML5
 #### 2. CSS
 #### 3. JavaScript
 #### 4. Mongoose
