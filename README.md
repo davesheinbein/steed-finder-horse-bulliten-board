@@ -1,4 +1,4 @@
-# **Horse Bulletin Board**
+# **Stead Finder**
 
 This website showcase RESTful routes, CRUD functionality, and JWT login requirements. A variety of technologies were used and are listed below.
 
