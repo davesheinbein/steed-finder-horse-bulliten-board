@@ -2,7 +2,7 @@
 
 This website showcase RESTful routes, CRUD functionality, and JWT login requirements. A variety of technologies were used and are listed below.
 
-The websites allow people to post horses and there contact information in the hopes of connecting sellers with potential buyers.
+The websites allow people to post horses and their contact information in the hopes of connecting sellers with potential buyers.
 
 You are able to list a horse and leave comments on horses when logged into the website.
 
@@ -57,7 +57,7 @@ You are able to list a horse and leave comments on horses when logged into the w
 
 ## Potential Next Steps: 
 
-##### - [x] Add some animation
+##### - [x] Add animations
 ##### - [] Swap in materialize or bootstrap for the majority of the css
 ##### - [] Update Css further for media queries
-##### - [] Add relevant API
+##### - [] Add an API
