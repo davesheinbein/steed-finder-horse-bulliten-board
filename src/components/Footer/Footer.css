@@ -1,37 +1,42 @@
-.displayBlock {
-    display: block;
-    width: 100%;
+.page-footer {
+    padding-top: 0px;
     height: auto;
-    margin-top: 6em;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     width: 100%;
-    height: 2em;
-    position: absolute;
-    bottom: 0px;
-    -webkit-box-shadow: 0px 5px 20px -6px black;
-    -moz-box-shadow: 0px 5px 20px -6px black;
-    box-shadow: 0px 5px 20px -6px black;
     background-color:#7d6257;
-    color: white;
-    padding: 5px 10px;
-    margin-top: 1em;
-    margin-bottom: 0px;
     animation-name: content;
     animation-duration: 2s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
+    bottom: 0px;
 }
 
 @keyframes content {
-    0%   {bottom: -50px;}
+    0%   {bottom: -100px;}
     100% {bottom: 0;}
-  }
+}
 
+.footer-copyright {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    background-color:red;
+    color: white;
+    -webkit-box-shadow: 0px 5px 20px -6px black;
+    -moz-box-shadow: 0px 5px 20px -6px black;
+    box-shadow: 0px 5px 20px -6px black;
+}
+
+.container {
+    width: 100%;
+}
+
+.bottom-container {
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .barnFooterImg {
     height: 1em;
@@ -47,23 +52,52 @@
 
 .barnFooterImg:active {
     position: absolute;
-    right: 20rem;
     transform: rotateX(360deg);
     background-color: #C04342;
     border-radius: 0%;
 }
 
-.footer-left {
-    margin-left: 1rem;
+.horseImg {
+    width: 25%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
 
-.footer-right {
-    margin-left: auto;
-    margin-right: 1rem;
+.horseImg:hover {
+    transform: rotateY(180deg) rotateX(360deg);
 }
 
+.footer-header {
+    padding: 1em 0px 0px;
+}
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+ul li a {
+    color: orange;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: red;
+    text-decoration: underline white solid;
+}
+
+.footer-title-link a {
+    color: orange;
+    text-decoration: none;
+}
+
+.footer-title-link a:hover {
+    color: red;
+    text-decoration: underline white solid;
+}
+
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .footer-container {
         display: flex;
         justify-content: center;
@@ -129,4 +163,4 @@
     .displayBlock {
         height: 14vh;
     }
-}
+} */
