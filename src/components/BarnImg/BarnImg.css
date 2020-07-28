@@ -8,7 +8,7 @@
     color: #BF4342;
     text-align: center;
     width: 100%;
-    margin: -40px -0px;
+    margin: 0px 0px -30px;
     position: relative;
     animation: titleTextAnim;
     animation-duration: 2s;
@@ -27,7 +27,7 @@
     color: #BF4342;
     text-align: center;
     width: 100%;
-    margin: -60px -0px;
+    margin: 0px 0px -30px;
     position: relative;
     animation: subTitleTextAnim;
     animation-duration: 2s;
@@ -48,6 +48,13 @@
     animation-duration: 2s;
     transition-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.barnImg:hover {
+    transform: rotate(360deg) scale(0.25);
 }
 
 @keyframes barnAnim {
