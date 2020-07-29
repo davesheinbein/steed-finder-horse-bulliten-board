@@ -45,6 +45,8 @@
     width: 2em;
     background-color: white;
     border-radius: 100%;
+    padding: 2px;
+    margin: 0px 2px;
     transition-property: all;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
@@ -54,7 +56,7 @@
 
 .barnFooterImg:active {
     position: absolute;
-    transform: rotateX(360deg);
+    transform: rotateX(720deg);
     background-color: #C04342;
     border-radius: 0%;
 }
