@@ -100,7 +100,7 @@ class App extends Component {
     const horsesCopy = this.state.horses
     // console.log(deleteRes, '<<<< deleteRes');
     const newHorses = horsesCopy.map((horse) => {
-      if (horse._id == deleteRes._id) {
+      if (horse._id === deleteRes._id) {
         return deleteRes
       } else {
         return horse

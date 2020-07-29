@@ -15,7 +15,7 @@ const NavBar = (props) => {
           <li><span className='NavBar-welcome'>Welcome, {props.user.name}</span></li>
         </ul>
 
-        <a href="#" className="brand-logo center"><Link to='' className='NavBar-link mainLogoText'>Steed Finder</Link></a>
+        <div className="brand-logo center"><Link to='' className='NavBar-link mainLogoText'>Steed Finder</Link></div>
 
         <ul id="nav-mobile" className="right align-row">
           <li><Link to='/marketplace' className='NavBar-link'>Marketplace</Link></li>
@@ -36,7 +36,7 @@ const NavBar = (props) => {
           <li><Link to='/signup' className='NavBar-link'>Sign Up</Link></li>
         </ul>
 
-        <a href="#" className="brand-logo center"><Link to='' className='NavBar-link mainLogoText'>Steed Finder</Link></a>
+        <div className="brand-logo center"><Link to='' className='NavBar-link mainLogoText'>Steed Finder</Link></div>
 
         <ul id="nav-mobile" className="right align-row">
           <li><Link to='/marketplace' className='NavBar-link'>Marketplace</Link></li>
