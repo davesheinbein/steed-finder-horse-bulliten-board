@@ -38,7 +38,7 @@
 @keyframes subTitleTextAnim {
     0%   {left: -1500px;}
     100% {left: 0px;}
-  }
+}
 
 .barnImg {
     min-width: 30%;
@@ -60,7 +60,7 @@
 @keyframes barnAnim {
     0%   {right: -1500px;}
     100% {right: 0px;}
-  }
+}
 
 .spacing {
     position: relative;

@@ -1,9 +1,11 @@
 import React from 'react';
 import HorseMarketplaceItem from '../../components/HorseMarketplaceItem/HorseMarketplaceItem'
 import './HorseMarketplacePage.css'
+import horseJumping from './Horse-Jumping-Silhouette.png'
+import { Link } from 'react-router-dom';
 
 function HorseMarketplace(props) {
-    return (
+    let marketplace = props.user ?
         <div>
             <div className='header'>Marketplace</div>
             <div className='HorseMarketplace'>
@@ -16,6 +18,16 @@ function HorseMarketplace(props) {
                     />
                 )}
             </div>
+        </div>
+        :
+        <div className='loginMessage'>
+            <img src={horseJumping} alt="HorseJumping" className='HorseJumpingImg' />
+            <Link to='/login' className='NavBar-link loginMessageText'>Login to view more!</Link>
+        </div >
+
+    return (
+        <div>
+            {marketplace}
         </div>
     )
 }

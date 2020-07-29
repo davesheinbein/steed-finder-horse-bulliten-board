@@ -13,6 +13,45 @@
     margin: 0 0 5rem;
 }
 
+.loginMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 60vh;
+    width: 100%;
+}
+
+.loginMessageText {
+    font-size: 3rem;
+    color: #BF4342;
+    text-align: center;
+
+}
+
+.HorseJumpingImg {
+    min-width: 30%;
+    margin-top: 3em;
+    position: relative;
+    animation: horseAnim;
+    animation-duration: 2s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.HorseJumpingImg:hover {
+    transform: rotate(-720deg) scale(0.25);
+}
+
+@keyframes horseAnim {
+    0%   {right: -1500px;}
+    100% {right: 0px;}
+}
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .HorseMarketplace {
         grid-template-columns: 4fr;

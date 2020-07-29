@@ -3,7 +3,7 @@
     display: flex;
     width: 98vw;
     height: 4vh;
-    margin: 0px auto;
+    margin: .5em auto;
     position: relative;
     animation: navAnim;
     animation-duration: 2s;
@@ -69,24 +69,20 @@
 
 
 
-/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
-    .NavBar {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .NavBar-header {
         font-size: .75rem;
     }
 
     .mainLogoText {
         line-height: 20px;
-        font-size: .30rem;
+        font-size: .9rem;
         color: gold;
-    }
-    
-    .mainLogoTextHide {
-        display: none;
     }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
-    .NavBar {
+    .NavBar-header {
         font-size: 1.5rem;
     }
 
@@ -98,7 +94,7 @@
 }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
-    .NavBar {
+    .NavBar-header {
         font-size: 2.5rem;
     }
 
@@ -107,4 +103,4 @@
         font-size: 3rem;
         color: #BF4342;
     }
-} */
+}

@@ -184,6 +184,7 @@ class App extends Component {
             <Route exact path='/addlisthorse' render={() =>
               <div>
                 <AddListHorsePage
+                  user={this.state.user} // new
                   horses={this.state.horses}
                   handleAddHorse={this.handleAddHorse}
                 />

@@ -7,7 +7,6 @@
     animation-name: content;
     animation-duration: 2s;
     animation-fill-mode: forwards; 
-    /* position: absolute; */
     bottom: auto;
 }
 
