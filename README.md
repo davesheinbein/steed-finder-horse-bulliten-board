@@ -11,23 +11,27 @@ You are able to list a horse and leave comments on horses when logged into the w
 ### Home Page Sceenshot
 ![Home Page Sceenshot](./Screenshots/homepageScreenshot.png?)
 
-[Home Page Sceenshot](https://imgur.com/nbhFggL)
+[Home Page Sceenshot](https://imgur.com/6bHIxvp)
 
 ![List Horse Page Sceenshot](./Screenshots/listHorseScreenshot.png?)
 
-[List Horse Sceenshot](https://imgur.com/bmKv4Fi)
+[List Horse Sceenshot](https://imgur.com/N3tfSTH)
 
 ![Horse Marketplace Page Sceenshot](./Screenshots/marketplaceScreenshot.png?)
 
-[Horse Marketplace Sceenshot](https://imgur.com/SAbvlSu)
+[Horse Marketplace Sceenshot](https://imgur.com/3dEGVu0)
+
+![Not Logged in Page Sceenshot](./Screenshots/notLoginScreenshot.png?)
+
+[Not Logged in Page Sceenshot](https://imgur.com/SCts7Fl)
 
 ![Login Page Sceenshot](./Screenshots/loginScreenshot.png?)
 
-[Login Sceenshot](https://imgur.com/08T3D2o)
+[Login Sceenshot](https://imgur.com/lKojeae)
 
 ![Signup Page Sceenshot](./Screenshots/signupScreenshot.png?)
 
-[Signup Sceenshot](https://imgur.com/J6u2dvT)
+[Signup Sceenshot](https://imgur.com/rGSg1pQ)
 
 
 
