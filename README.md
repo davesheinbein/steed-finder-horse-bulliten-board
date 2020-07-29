@@ -53,7 +53,7 @@ You are able to list a horse and leave comments on horses when logged into the w
 
 
 ### Click the link to view the website
-[Horse Bulletin Board Webstite](https://horse-bulletin-board.herokuapp.com/) 
+[Stead Finder Webstite](https://horse-bulletin-board.herokuapp.com/) 
 
 ### Click the link to view the Trello Board
 [Trello Board](https://trello.com/b/QQgGKAnE/ga-project-4)
