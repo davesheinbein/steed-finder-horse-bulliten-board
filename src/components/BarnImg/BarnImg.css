@@ -75,12 +75,12 @@
     }
     .titleText {
         font-size: 3rem;
-        margin: -30px -0px;
+        margin: -20px -0px;
     }
     
     .subTitleText {
         font-size: 2rem;
-        margin: -40px -0px;
+        margin: -20px -0px;
     }
 }
 
@@ -105,11 +105,11 @@
     }
     .titleText {
         font-size: 7rem;
-        margin: -50px -0px;
+        margin: -40px -0px ;
     }
     
     .subTitleText {
         font-size: 4.5rem;
-        margin: -80px -0px;
+        margin: -40px -0px;
     }
 }
