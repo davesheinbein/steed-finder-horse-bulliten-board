@@ -71,12 +71,12 @@
 
 @media (min-width: 375px) and (max-width: 812px) {
     .NavBar-header {
-        font-size: 1.25rem;
+        font-size: .75rem;
     }
 
     .mainLogoText {
         line-height: 20px;
-        font-size: 1.5rem;
+        font-size: .8rem;
         color: gold;
     }
 }
