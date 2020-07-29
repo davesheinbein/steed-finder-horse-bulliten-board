@@ -1,4 +1,5 @@
 .NavBar-header {
+    background-color: #A68A7F;
     display: flex;
     width: 98vw;
     height: 4vh;
@@ -24,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid seagreen;
+    background-color: #A68A7F;
 }
 
 .align-row {

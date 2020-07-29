@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './AddListHorsePage.module.css'
+import './AddListHorsePage.css'
 import horses from '../../Constants/horses'
 
 class ListHorse extends Component {
@@ -23,13 +23,6 @@ class ListHorse extends Component {
     this.props.handleAddHorse(this.state.formData);
   };
 
-  // handlePattern() = e => {
-  //   if (invalidForm = false) {
-
-  //   } else {
-  //     alert('Form Data is invalid.' < br ></br > 'Please try again.')
-  //   }
-  // }
 
   handleChange = e => {
     const formData = { ...this.state.formData, [e.target.name]: e.target.value };
@@ -44,13 +37,13 @@ class ListHorse extends Component {
   render() {
     return (
       <>
-        <div className={styles.headerFooter}>Add Horse</div>
-        <div className={styles.container}>
+        <div className='headerFooter'>Add Horse</div>
+        <div className='containerForm'>
           <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-            < div className={styles.formGroup}>
+            < div className='formGroup'>
               <label>Name (required): </label>
               <input
-                className={styles.formControl}
+                className='formControl'
                 name="name"
                 value={this.state.formData.name}
                 onChange={this.handleChange}
@@ -60,37 +53,37 @@ class ListHorse extends Component {
               />
             </div>
 
-            <div className={styles.formGroup}>
+            <div className='formGroup'>
               <label>Age: </label>
               <input
-                className={styles.formControl}
+                className='formControl'
                 name="age"
                 value={this.state.formData.age}
                 placeholder='###'
                 onChange={this.handleChange}
                 type='number'
-              // pattern="{/^[1-9][0-9]?[0-9]?$/g}"
               />
             </div>
 
-            <div className={styles.formGroup}>
-              <label>Breed (required): </label>
+            <div className='formGroup'>
+              <label>Breed: </label>
               <select
                 name="categories"
-                className={styles.formControl}
+                className='formControl browser-default'
                 value={this.state.formData.categories}
                 onChange={this.handleChange}
               >
                 {
-                  horses.map(horse => <option value={horse}>{horse}</option>)
+                  horses.map(horse => 
+                  <option value={horse}>{horse}</option>)
                 }
               </select>
             </div>
 
-            <div className={styles.formGroup}>
+            <div className='formGroup'>
               <label>$ Price (required): </label>
               <input
-                className={styles.formControl}
+                className='formControl'
                 name="price"
                 value={this.state.formData.price}
                 onChange={this.handleChange}
@@ -101,10 +94,10 @@ class ListHorse extends Component {
               />
             </div>
 
-            <div className={styles.formGroup}>
+            <div className='formGroup'>
               <label>Location (required): </label>
               <input
-                className={styles.formControl}
+                className='formControl'
                 name="location"
                 value={this.state.formData.location}
                 onChange={this.handleChange}
@@ -114,10 +107,10 @@ class ListHorse extends Component {
               />
             </div>
 
-            <div className={styles.formGroup}>
+            <div className='formGroup'>
               <label>Contact Number (required): </label>
               <input
-                className={styles.formControl}
+                className='formControl'
                 name="contact"
                 value={this.state.formData.contact}
                 onChange={this.handleChange}
@@ -128,10 +121,10 @@ class ListHorse extends Component {
               />
             </div>
 
-            <div className={styles.formGroup}>
+            <div className='formGroup'>
               <label>Horse Image (URL): </label>
               <input
-                className={styles.formControl}
+                className='formControl'
                 name="image"
                 value={this.state.formData.image}
                 onChange={this.handleChange}
@@ -141,7 +134,7 @@ class ListHorse extends Component {
 
             <button
               type="submit"
-              className={styles.btn}
+              className='btn'
               disabled={this.state.invalidForm}
             // onClick={this.handlePattern}
             >

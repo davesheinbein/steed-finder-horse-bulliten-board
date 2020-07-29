@@ -2,11 +2,13 @@
     padding-top: 0px;
     height: auto;
     width: 100%;
+    margin-top: auto;
     background-color:#7d6257;
     animation-name: content;
     animation-duration: 2s;
     animation-fill-mode: forwards; 
-    bottom: 0px;
+    /* position: absolute; */
+    bottom: auto;
 }
 
 @keyframes content {

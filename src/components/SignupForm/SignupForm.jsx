@@ -51,7 +51,7 @@ class SignupForm extends Component {
               <label className='form-label'>Name:</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control inputValues"
                 placeholder="Name (required)"
                 value={this.state.name}
                 name="name"
@@ -65,7 +65,7 @@ class SignupForm extends Component {
               <label className='form-label'>Email:</label>
               <input
                 type="email"
-                className="form-control"
+                className="form-control inputValues"
                 placeholder="Email (required)"
                 value={this.state.email}
                 name="email"
@@ -79,10 +79,11 @@ class SignupForm extends Component {
               <label className='form-label'>Location:</label>
               <input
                 type="location"
-                className="form-control"
+                className="form-control inputValues"
                 placeholder="Location (City, State)"
                 value={this.state.location}
                 name="location"
+                autocomplete="off"
                 onChange={this.handleChange}
               />
             </div>
@@ -92,10 +93,11 @@ class SignupForm extends Component {
               <label className='form-label'>Phone Number:</label>
               <input
                 type="contactNumber"
-                className="form-control"
+                className="form-control inputValues"
                 placeholder="Contact Number #"
                 value={this.state.contactNumber}
                 name="contactNumber"
+                autocomplete="off"
                 onChange={this.handleChange}
               />
             </div>
@@ -105,7 +107,7 @@ class SignupForm extends Component {
               <label className='form-label'>Password:</label>
               <input
                 type="password"
-                className="form-control"
+                className="form-control inputValues"
                 placeholder="Password (required)"
                 value={this.state.password}
                 name="password"
@@ -119,7 +121,7 @@ class SignupForm extends Component {
               <label className='form-label'>Confirm Password:</label>
               <input
                 type="password"
-                className="form-control"
+                className="form-control inputValues"
                 placeholder="Confirm Password (required)"
                 value={this.state.passwordConf}
                 name="passwordConf"

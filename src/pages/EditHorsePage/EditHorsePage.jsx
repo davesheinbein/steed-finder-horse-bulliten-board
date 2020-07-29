@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './EditHorsePage.module.css'
+import './EditHorsePage.css'
 import horses from '../../Constants/horses'
 
 class EditHorsePage extends Component {
@@ -27,13 +27,13 @@ class EditHorsePage extends Component {
     render() {
         return (
             <>
-                <div className={styles.headerFooter}>Edit Horse</div>
-                <div className={styles.formContainer}>
+                <div className='headerFooter'>Edit Horse</div>
+                <div className='formContainer'>
                     <form ref={this.formRef} autoComplete="off" onSubmit={this.handleSubmit}>
-                        <div className={styles.formGroup}>
-                            <label className={styles.formLabel}>Name (required): </label>
+                        <div className='formGroup'>
+                            <label className='formLabel'>Name (required): </label>
                             <input
-                                className={styles.formController}
+                                className='formController'
                                 name="name"
                                 value={this.state.formData.name}
                                 onChange={this.handleChange}
@@ -41,10 +41,10 @@ class EditHorsePage extends Component {
                             />
                         </div>
 
-                        <div className={styles.formGroup}>
-                            <label className={styles.formLabel}>Age: </label>
+                        <div className='formGroup'>
+                            <label className='formLabel'>Age: </label>
                             <input
-                                className={styles.formController}
+                                className='formController'
                                 name="age"
                                 value={this.state.formData.age}
                                 onChange={this.handleChange}
@@ -52,11 +52,11 @@ class EditHorsePage extends Component {
                             />
                         </div>
 
-                        <div className={styles.formGroup}>
-                            <label>Breed (required): </label>
+                        <div className='formGroup'>
+                            <label>Breed: </label>
                             <select
                                 name="categories"
-                                className={styles.formControl}
+                                className='formControl browser-default'
                                 value={this.state.formData.categories}
                                 onChange={this.handleChange}
                             >
@@ -66,10 +66,10 @@ class EditHorsePage extends Component {
                             </select>
                         </div>
 
-                        <div className={styles.formGroup}>
-                            <label className={styles.formLabel}>$ Price (required): </label>
+                        <div className='formGroup'>
+                            <label className='formLabel'>$ Price (required): </label>
                             <input
-                                className={styles.formController}
+                                className='formController'
                                 name="price"
                                 value={this.state.formData.price}
                                 onChange={this.handleChange}
@@ -78,10 +78,10 @@ class EditHorsePage extends Component {
                             />
                         </div>
 
-                        <div className={styles.formGroup}>
-                            <label className={styles.formLabel}>Location (City, State) (required): </label>
+                        <div className='formGroup'>
+                            <label className='formLabel'>Location (City, State) (required): </label>
                             <input
-                                className={styles.formController}
+                                className='formController'
                                 name="location"
                                 value={this.state.formData.location}
                                 onChange={this.handleChange}
@@ -89,10 +89,10 @@ class EditHorsePage extends Component {
                             />
                         </div>
 
-                        <div className={styles.formGroup}>
-                            <label className={styles.formLabel}>Contact Number # (required): </label>
+                        <div className='formGroup'>
+                            <label className='formLabel'>Contact Number # (required): </label>
                             <input
-                                className={styles.formController}
+                                className='formController'
                                 name="contact"
                                 value={this.state.formData.contact}
                                 onChange={this.handleChange}
@@ -101,10 +101,10 @@ class EditHorsePage extends Component {
                             />
                         </div>
 
-                        <div className={styles.formGroup}>
-                            <label className={styles.formLabel}>Horse's Image link (required): </label>
+                        <div className='formGroup'>
+                            <label className='formLabel'>Horse's Image link (required): </label>
                             <input
-                                className={styles.formController}
+                                className='formController'
                                 name="image"
                                 value={this.state.formData.image}
                                 onChange={this.handleChange}
@@ -112,17 +112,17 @@ class EditHorsePage extends Component {
                             />
                         </div>
 
-                        <div className={styles.btnActions}>
+                        <div className='btnActions'>
                             <button
                                 type="submit"
-                                className={styles.btn}
+                                className='btn'
                                 disabled={this.state.invalidForm}
                             >
                                 Save Horse
                         </button>&nbsp;&nbsp;
                             <Link
                                 to='/'
-                                className={styles.btnCancel}
+                                className='btnCancel'
                             >
                                 CANCEL
                             </Link>

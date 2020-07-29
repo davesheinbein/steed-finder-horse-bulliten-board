@@ -1,11 +1,8 @@
-.container {
+.containerForm {
     margin: 2em 16em;
     padding: 1em 2em;
     text-align: start;
-    background-color: white;
-    -webkit-box-shadow: 0px 5px 20px -6px black;
-    -moz-box-shadow: 0px 5px 20px -6px black;
-    box-shadow: 0px 5px 20px -6px black;
+    background-color: transparent;
 }
 
 input {
@@ -21,9 +18,9 @@ select {
     min-width: auto;
     width: 100%;
     padding: .5em 0px;
-    -webkit-box-shadow: 0px 2px 10px -2px black;
-    -moz-box-shadow: 0px 2px 10px -2px black;
-    box-shadow: 0px 2px 10px -2px black;
+    margin-bottom: 1em;
+    background-color: transparent;
+    border: 1px solid #9E9E9E;
 }
 
 .btn {
@@ -46,7 +43,7 @@ select {
 
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
-    .container {
+    .containerForm {
         margin: 1em 5%;
         margin-bottom: 20em;
         padding: 1em 2em;
@@ -55,7 +52,7 @@ select {
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
-    .container {
+    .containerForm {
         margin: 2em 10%;
         padding: 1em 2em;
         text-align: start;
@@ -63,7 +60,7 @@ select {
 }
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
-    .container {
+    .containerForm {
         margin: 2em 10%;
         padding: 1em 2em;
         text-align: start;

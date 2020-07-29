@@ -8,6 +8,7 @@
   animation-duration: 2s;
   transition-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+  box-sizing: border-box;
 }
 
 @keyframes appAnim {
@@ -15,6 +16,10 @@
   100% {top: 0px;}
   }
 
+
+main {
+  min-height: calc(100vh - 51.46px - 259.54px);
+}
 
 footer {
   width: 100%;

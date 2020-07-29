@@ -25,6 +25,9 @@ button:hover {
     color: #BF4342;
     text-decoration: none;
     padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cancelLink:hover {
@@ -37,6 +40,23 @@ button:hover {
 .form-control {
     width: 100%;
 }
+
+input {
+    box-shadow: none;
+}
+
+.inputValues {
+    height: 2.5em;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+
+.inputValues:focus {
+    border-bottom: 2px solid #35A59A;
+}
+
   
 .form-horizontal {
     width: 100%;
@@ -46,6 +66,9 @@ button:hover {
 .form-label {
     display: flex;
     justify-content: flex-start;
+    font-size: 1rem;
+    margin: 1em 0px;
+    color: black;
 }
   
 .form-group-btns {
@@ -54,8 +77,16 @@ button:hover {
 
 .btn-default {
     margin: auto;
+    background-color: #35A59A;
+    color: white;
 }
+
 
 .text-center {
     display: flex;
+}
+
+::placeholder {
+    color: gray;
+    font-size: .75rem;
 }

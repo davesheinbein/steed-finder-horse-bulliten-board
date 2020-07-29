@@ -162,67 +162,69 @@ class App extends Component {
             handleLogout={this.handleLogout}
           />
         </header>
-        <Switch>
-          <Route exact path='/' render={() =>
-            <div>
-              <Barn />
-              <About />
-              <Team />
-              <Disclaimer />
-            </div>
-          } />
-          <Route exact path='/marketplace' render={() =>
-            <div>
-              <HorseMarketplacePage
-                user={this.state.user}
-                horses={this.state.horses}
-                handleDeleteHorse={this.handleDeleteHorse}
+        <main>
+          <Switch>
+            <Route exact path='/' render={() =>
+              <div>
+                <Barn />
+                <About />
+                <Team />
+                <Disclaimer />
+              </div>
+            } />
+            <Route exact path='/marketplace' render={() =>
+              <div>
+                <HorseMarketplacePage
+                  user={this.state.user}
+                  horses={this.state.horses}
+                  handleDeleteHorse={this.handleDeleteHorse}
+                />
+              </div>
+            } />
+            <Route exact path='/addlisthorse' render={() =>
+              <div>
+                <AddListHorsePage
+                  horses={this.state.horses}
+                  handleAddHorse={this.handleAddHorse}
+                />
+              </div>
+            } />
+            <Route exact path='/details' render={({ location }) =>
+              <div>
+                <HorseDetailPage
+                  horses={this.state.horses}
+                  user={this.state.user}
+                  location={location}
+                  handleUpdateHorse={this.handleUpdateHorse}
+                  handleDeleteHorse={this.handleDeleteHorse}
+                  handleAddComment={this.handleAddComment}
+                  handleDeleteComment={this.handleDeleteComment}
+                />
+              </div>
+            } />
+            <Route exact path='/edit' render={({ location }) =>
+              <div>
+                <EditHorsePage
+                  horses={this.state.horses}
+                  handleUpdateHorse={this.handleUpdateHorse}
+                  location={location}
+                />
+              </div>
+            } />
+            <Route exact path='/signup' render={({ history }) =>
+              <SignupPage
+                history={history}
+                handleSignupOrLogin={this.handleSignupOrLogin}
               />
-            </div>
-          } />
-          <Route exact path='/addlisthorse' render={() =>
-            <div>
-              <AddListHorsePage
-                horses={this.state.horses}
-                handleAddHorse={this.handleAddHorse}
+            } />
+            <Route exact path='/login' render={({ history }) =>
+              <LoginPage
+                handleSignupOrLogin={this.handleSignupOrLogin}
+                history={history}
               />
-            </div>
-          } />
-          <Route exact path='/details' render={({ location }) =>
-            <div>
-              <HorseDetailPage
-                horses={this.state.horses}
-                user={this.state.user}
-                location={location}
-                handleUpdateHorse={this.handleUpdateHorse}
-                handleDeleteHorse={this.handleDeleteHorse}
-                handleAddComment={this.handleAddComment}
-                handleDeleteComment={this.handleDeleteComment}
-              />
-            </div>
-          } />
-          <Route exact path='/edit' render={({ location }) =>
-            <div>
-              <EditHorsePage
-                horses={this.state.horses}
-                handleUpdateHorse={this.handleUpdateHorse}
-                location={location}
-              />
-            </div>
-          } />
-          <Route exact path='/signup' render={({ history }) =>
-            <SignupPage
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
-            />
-          } />
-          <Route exact path='/login' render={({ history }) =>
-            <LoginPage
-              handleSignupOrLogin={this.handleSignupOrLogin}
-              history={history}
-            />
-          } />
-        </Switch>
+            } />
+          </Switch>
+        </main>
         <footer>
           <Footer />
         </footer>

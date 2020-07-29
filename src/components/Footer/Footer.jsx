@@ -28,8 +28,8 @@ function Footer() {
         </div>
         <div className="footer-copyright">
           <div className="container bottom-container">
-            <div className='left left-text'>Created by D. Sheinbein <img src={barn} alt="Barn" className='barnFooterImg'></img></div>
-            <div className='right right-text'>All Rights Reserved, &copy; 2020 Steed Finder</div>
+            <div className='left-align left'>Created by D. Sheinbein <img src={barn} alt="Barn" className='barnFooterImg'></img></div>
+            <div className='right-align right'>All Rights Reserved, &copy; 2020 Steed Finder</div>
           </div>
         </div>
 
