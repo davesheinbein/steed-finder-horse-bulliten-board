@@ -17,7 +17,7 @@ You are able to list a horse and leave comments on horses when logged into the w
 
 [List Horse Sceenshot](https://imgur.com/N3tfSTH)
 
-![Horse Marketplace Page Sceenshot](./Screenshots/marketplaceScreenshot.png?)
+![Horse Marketplace Page Sceenshot](./Screenshots/marketplaceScreensho.png?)
 
 [Horse Marketplace Sceenshot](https://imgur.com/3dEGVu0)
 
