@@ -1,4 +1,4 @@
-# **Stead Finder**
+# **Steed Finder**
 
 [Stead Finder Webstite](https://horse-bulletin-board.herokuapp.com/) 
 
