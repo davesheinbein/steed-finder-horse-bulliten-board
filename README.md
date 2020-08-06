@@ -1,6 +1,6 @@
 # **Steed Finder**
 
-[Stead Finder Webstite](https://horse-bulletin-board.herokuapp.com/) 
+[Steed Finder Webstite](https://horse-bulletin-board.herokuapp.com/) 
 
 This website showcase RESTful routes, CRUD functionality, and JWT login requirements. A variety of technologies were used and are listed below.
 
@@ -53,7 +53,7 @@ You are able to list a horse and leave comments on horses when logged into the w
 
 
 ### Click the link to view the website
-[Stead Finder Webstite](https://horse-bulletin-board.herokuapp.com/) 
+[Steed Finder Webstite](https://horse-bulletin-board.herokuapp.com/) 
 
 ### Click the link to view the Trello Board
 [Trello Board](https://trello.com/b/QQgGKAnE/ga-project-4)
